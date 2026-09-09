@@ -23,7 +23,7 @@ Os metadados utilizam `VERCEL_PROJECT_PRODUCTION_URL`. Ao configurar domínio pr
 - WhatsApp informado pelo solicitante: +55 (71) 99671-4060. Todos os CTAs de agendamento usam `appointmentUrl`.
 - `app/joelane.css`: adaptação dos enquadramentos e responsividade à nova identidade.
 - `app/icon.svg`, `app/favicon.ico`, `app/apple-icon.png`: monograma JB em formatos para navegador e celular.
-- `app/opengraph-image.png` e `app/twitter-image.png`: retrato original da Dra. Joelane para compartilhamento.
+- `app/opengraph-image.jpg` e `app/twitter-image.jpg`: arte de compartilhamento fornecida, otimizada em JPEG sem recortar ou alterar sua composição.
 - `public/images`: fotos fornecidas, convertidas para WebP sem retoques. As comparações usam recortes CSS das imagens completas e respeitam a orientação de cada montagem.
 - `public/fonts`: tipografia local e licenças do template.
 
