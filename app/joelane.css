@@ -1,0 +1,116 @@
+/* Joelane Bittencourt: champagne, gold and warm stone. */
+.header .brand-type { letter-spacing: .1em; }
+.brand-monogram { font-family: var(--serif); font-style: normal; }
+.header.scrolled { background: #faf7f1ed; }
+.campaign { min-height: 880px; }
+.campaign-copy { width: 51%; padding-top: 65px; }
+.campaign h1 { font-size: clamp(72px, 6.1vw, 112px); line-height: 1.03; }
+.campaign-kicker { font-size: 12px; }
+.campaign-subtitle { font-size: clamp(16px, 1.3vw, 20px); }
+.campaign-portrait { width: 47%; height: 740px; max-height: 86%; min-height: 590px; top: 22px; right: 0; aspect-ratio: auto; }
+.campaign-silhouette { mask: none; -webkit-mask: none; border-radius: 260px 260px 24px 24px; overflow: hidden; box-shadow: 0 24px 65px #392e1e16; }
+.campaign-original { object-fit: cover; object-position: 49% 20%; }
+.campaign-seal { width: 120px; top: 15px; right: 39%; color: var(--rose-deep); background: #f5eee0ed; border-radius: 50%; }
+.campaign-seal .seal-monogram { fill: currentColor; font-family: var(--serif); font-size: 46px; letter-spacing: -4px; }
+.campaign-editorial { top: auto; bottom: 145px; right: 3%; color: #fff9ec; text-shadow: 0 2px 16px #352c2466; }
+.campaign-metrics { width: 48%; margin-top: 43px; grid-template-columns: 1fr 1.15fr 1fr; }
+.campaign-metric strong { font-size: clamp(27px, 2.5vw, 42px); }
+.campaign-metric>span { font-size: 11px; letter-spacing: .09em; }
+.campaign-signature { bottom: 50px; }
+.campaign-signature p { font-size: 12px; }
+.campaign-signature em { font-size: 18px; }
+.campaign::after { height: 90px; }
+.essence-stage { height: 770px; }
+.essence-smile { width: 39%; height: 590px; right: 5%; top: 105px; aspect-ratio: auto; mask: none; -webkit-mask: none; border-radius: 48% 48% 42% 42%; overflow: hidden; }
+.essence-smile img { object-fit: cover; object-position: 50% 0; }
+.essence-editorial-copy { width: 46%; padding-top: 40px; }
+.essence-editorial h2 { font-size: clamp(68px, 6.5vw, 112px); }
+.essence-editorial-description { font-size: 17px; }
+.essence-value p { font-size: 15px; }
+.essence-editorial-top p:last-child { font-size: 12px; }
+.essence-values-label { font-size: 12px; }
+.gallery-heading h2 { font-size: clamp(48px, 5.4vw, 88px); }
+.gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 25px; }
+.gallery-item { margin-top: 0 !important; }
+.gallery-photo { aspect-ratio: 4/5; background: #e5d8c4; }
+.gallery-photo img { object-fit: contain; }
+.gallery-item figcaption { align-items: flex-start; gap: 9px; flex-wrap: wrap; }
+.gallery-item figcaption>span:first-child { font-size: 15px; }
+.gallery-item figcaption>span:last-child { font-size: 10px; }
+.compare-half.before { background-position: left top; }
+.compare-half.after { background-position: right bottom; }
+.viewer-stage { min-width: 0; }
+.comparison { max-width: 100%; }
+.ritual-list p { font-size: 17px; }
+.footer-name { font-size: clamp(28px, 2.8vw, 46px); }
+@media(min-width:701px) and (max-width:1100px) {
+  .header { gap: 18px; }
+  .desktop-nav { gap: 16px; }
+  .header .header-cta { padding-inline: 16px; letter-spacing: .03em; }
+  .campaign { height: 900px; min-height: 900px; }
+  .campaign-copy { width: 54%; padding-top: 65px; }
+  .campaign h1 { font-size: 6.4vw; }
+  .campaign-portrait { width: 46%; top: 65px; right: 0; height: 635px; min-height: 0; }
+  .campaign-seal { top: 13px; right: 34%; width: 110px; }
+  .campaign-editorial { top: auto; bottom: 115px; font-size: 20px; }
+  .campaign-metrics { display: grid; grid-template-columns: 1fr; gap: 18px; width: 42%; margin-top: 30px; }
+  .campaign-metric { align-items: flex-start; text-align: left; border-left: 1px solid var(--line); padding: 0 0 0 15px !important; gap: 3px; }
+  .campaign-metric>span { align-self: flex-start; max-width: none; }
+  .campaign-metric strong { font-size: 28px; }
+  .campaign-signature { bottom: 45px; }
+  .essence-stage { height: 740px; }
+  .essence-editorial-copy { margin-left: 6%; width: 47%; }
+  .essence-editorial h2 { font-size: 6.9vw; }
+  .essence-smile { width: 41%; right: 3%; top: 135px; height: 475px; }
+  .essence-editorial-description { width: 94%; font-size: 16px; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media(max-width:700px) {
+  .header .brand-monogram { font-size: 47px; }
+  .header .brand-type { font-size: 11px; letter-spacing: .04em; }
+  .header .brand-type small { font-size: 8px; letter-spacing: .08em; }
+  .campaign { height: auto; min-height: 0; padding-bottom: 48px; }
+  .campaign-inner { height: auto; min-height: 0; }
+  .campaign-copy { width: 100%; padding-top: 31px; }
+  .campaign-kicker { font-size: 11px; }
+  .campaign h1 { font-size: 11.9vw; line-height: 1.04; }
+  .campaign-title-line:first-child { max-width: 100%; }
+  .campaign-subtitle { max-width: 100%; font-size: 16px; line-height: 1.65; margin-top: 21px; }
+  .campaign-cta { font-size: 12px; letter-spacing: .09em; min-height: 55px; padding: 15px 23px; margin-top: 21px; }
+  .campaign-portrait { position: relative; width: 100%; right: auto; top: auto; margin-top: 35px; height: 122vw; min-height: 0; max-height: 650px; }
+  .campaign-silhouette { border-radius: 180px 180px 16px 16px; }
+  .campaign-original { object-position: 50% 20%; }
+  .campaign-seal { width: 96px; top: 390px; right: -3%; }
+  .campaign-editorial { top: auto; bottom: 177px; right: 5%; font-size: 21px; }
+  .campaign-metrics { display: grid; grid-template-columns: 1fr 1.15fr 1fr; width: 100%; gap: 0; margin-top: 32px; }
+  .campaign-metric { text-align: center; padding: 0 8px !important; gap: 6px; border: none; }
+  .campaign-metric+.campaign-metric { border-left: 1px solid var(--line); }
+  .campaign-metric strong { font-size: 27px; }
+  .campaign-metric>span { align-self: center; font-size: 10px; letter-spacing: .02em; }
+  .campaign-signature { display: none; }
+  .campaign::after { height: 45px; }
+  .essence-stage { display: flex; flex-direction: column; height: auto; min-height: 0; padding-bottom: 35px; }
+  .essence-editorial-top { order: 0; }
+  .essence-editorial-copy { order: 1; }
+  .essence-smile { order: 2; }
+  .essence-editorial-top { padding-block: 24px; }
+  .essence-editorial-top p:first-child { font-size: 11px; }
+  .essence-editorial-top p:last-child { font-size: 10px; }
+  .essence-editorial-copy { width: 88%; margin-left: 6%; padding-top: 29px; }
+  .essence-editorial h2 { font-size: 13vw; }
+  .essence-editorial-prelude { font-size: 19px; max-width: 100%; }
+  .essence-editorial-description { width: 100%; max-width: 450px; font-size: 16px; }
+  .essence-editorial-cta { max-width: 100%; flex-direction: row; align-items: center; font-size: 14px; gap: 18px; }
+  .essence-smile { position: relative; width: 78%; right: auto; top: auto; height: 100vw; max-height: 540px; margin: 34px auto 0; }
+  .essence-margin-note { display: none; }
+  .essence-values-label { font-size: 10px; white-space: normal; text-align: center; }
+  .essence-value p { font-size: 14px; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 28px; }
+  .gallery-heading h2 { font-size: 12vw; }
+  .gallery-item figcaption>span:first-child { font-size: 15px; }
+  .ritual-list p { font-size: 16px; }
+  .footer-main { grid-template-columns: 1fr; }
+  .footer-name { font-size: 35px; }
+  .footer-main>div { font-size: 14px; }
+  .social-chapter>div { font-size: 12px; }
+}
