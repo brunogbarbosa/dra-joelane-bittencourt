@@ -66,27 +66,27 @@ export function AuthorChapter() {
     };
   }, []);
 
-  return <section id="sobre" ref={root} className={styles.root} aria-labelledby="author-title">
+  return <section id="sobre" ref={root} className={`${styles.root} doctor-about`} aria-labelledby="author-title">
     <header className={styles.topline} data-author-motion="fade">
-      <p>02 / POR TRÁS DO CUIDADO</p>
+      <p>09 / Por trás de cada resultado</p>
       <span aria-hidden="true" />
       <p>A BELEZA TAMBÉM ESTÁ NAS PESSOAS.</p>
     </header>
 
     <div className={styles.stage}>
       <div className={styles.copy}>
-        <h2 id="author-title" aria-label="Cuidar é enxergar além.">
-          <span className={styles.titleMask}><span data-author-motion="title">Cuidar é</span></span>
-          <span className={styles.titleMask}><span data-author-motion="title">enxergar</span></span>
-          <span className={styles.titleMask}><em data-author-motion="title">além.</em></span>
+        <h2 id="author-title" aria-label="Dra. Joelane Bittencourt">
+          <span className={styles.titleMask}><span data-author-motion="title">Dra. Joelane</span></span>
+          <span className={styles.titleMask}><span data-author-motion="title">Bittencourt</span></span>
+
         </h2>
-        <p className={styles.subcopy} data-author-motion="subcopy">Cada detalhe começa<br />na escuta.</p>
+        <p className={styles.subcopy} data-author-motion="subcopy">Cirurgiã-dentista | Harmonização Orofacial<br/>{site.cro}</p>
       </div>
 
       <figure className={styles.photo} data-author-motion="photo">
         <Image
-          src={site.images.about}
-          alt="Dra. Joelane Bittencourt em um momento de planejamento no consultório"
+          src={site.images.hero}
+          alt="Retrato profissional da Dra. Joelane Bittencourt"
           fill
           sizes="(max-width: 700px) 51vw, (max-width: 1100px) 56vw, 54vw"
         />
@@ -137,8 +137,8 @@ export function AuthorChapter() {
       <div className={styles.closingRow}>
         <div className={styles.closingMonogram} aria-hidden="true"><strong>jb.</strong><span /></div>
         <p className={styles.closingStatement}>
-          <span data-author-motion="final">Precisão em cada escolha.</span>
-          <em data-author-motion="final">Cuidado em cada encontro.</em>
+          <span data-author-motion="final">Por trás de cada resultado, existe uma profissional que acredita</span>
+          <em data-author-motion="final">que estética não deve apagar quem você é.</em>
         </p>
         <div className={styles.closingSeal}><span aria-hidden="true" /><BrandSeal id={uid} /></div>
       </div>

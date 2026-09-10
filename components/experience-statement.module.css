@@ -603,3 +603,24 @@
  .root { background: linear-gradient(135deg, #faf7f1, #f1e9dc); }
  .photoCopy { top: auto; bottom: 7%; right: 7%; font-size: 18px; }
 }
+
+/* Existing editorial statement becomes the evaluation invitation. */
+.root:global(.evaluation-chapter) { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 7%; height: auto; padding: 90px 7%; }
+:global(.evaluation-chapter) .topline,:global(.evaluation-chapter) .heading,:global(.evaluation-chapter) .quote,:global(.evaluation-chapter) .cta { position: relative; inset: auto; width: 100%; grid-column: 1; margin: 0; }
+:global(.evaluation-chapter) .topline { align-self: start; }
+:global(.evaluation-chapter) .topline p { font-size: 12px; line-height: 1.6; letter-spacing: .1em; }
+:global(.evaluation-chapter) .heading h2 { font-size: clamp(43px,4.4vw,76px); line-height: 1.05; }
+:global(.evaluation-chapter) .titleMask>* { width: auto; white-space: normal; }
+:global(.evaluation-chapter) .subtitle { font-size: 12px; line-height: 1.6; letter-spacing: .14em; }
+:global(.evaluation-chapter) .quote { display: block; padding: 0; }
+:global(.evaluation-chapter) .quote>div { padding: 0; }
+:global(.evaluation-chapter) .quote p { font-family: var(--sans); font-size: 17px; font-style: normal; line-height: 1.8; letter-spacing: 0; }
+:global(.evaluation-chapter) .quote p+p { margin-top: 18px; }
+:global(.evaluation-chapter) .cta { min-height: 65px; padding: 17px 24px; font-size: 12px; letter-spacing: .08em; gap: 20px; line-height: 1.6; }
+:global(.evaluation-chapter) .photo { position: relative; inset: auto; grid-column: 2; grid-row: 1/5; width: 100%; height: 100%; min-height: 620px; }
+@media(max-width:700px) {
+ .root:global(.evaluation-chapter) { display: flex; flex-direction: column; padding: 60px 6%; gap: 25px; }
+ :global(.evaluation-chapter) .heading h2 { font-size: clamp(40px,11vw,60px); }
+ :global(.evaluation-chapter) .photo { height: 120vw; max-height: 650px; min-height: 0; }
+ :global(.evaluation-chapter) .cta { font-size: 11px; padding: 18px; }
+}

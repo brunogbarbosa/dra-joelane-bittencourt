@@ -75,7 +75,7 @@ export function useCampaignMotion() {
       ], 2600, 1000);
 
       // Wait for the real assets, with a bounded fallback on slow connections.
-      const photo = hero.querySelector<HTMLImageElement>('.campaign-original');
+      const photo = hero.querySelector<HTMLImageElement>('.before-after img');
       let readyTimer: ReturnType<typeof setTimeout>;
       const fallback = new Promise<void>(resolve => { readyTimer = setTimeout(resolve, 1400); });
       Promise.race([
@@ -95,8 +95,8 @@ export function useCampaignMotion() {
         progress += (targetProgress - progress) * .12;
         x += (pointerX - x) * .075;
         y += (pointerY - y) * .075;
-        const distance = innerWidth <= 700 ? 28 : 64;
-        portrait.style.translate = `${x * 9}px ${progress * distance + y * 5}px`;
+        const distance = innerWidth <= 700 ? 0 : 10;
+        portrait.style.translate = `${x * 2}px ${progress * distance + y * 5}px`;
         firstShape.style.translate = `${x * -12}px ${progress * -38}px`;
         secondShape.style.translate = `${x * 14}px ${progress * -65}px`;
         seal.style.translate = `0 ${progress * -22}px`;

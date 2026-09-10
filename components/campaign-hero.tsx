@@ -1,16 +1,12 @@
 'use client';
 
-import Image from 'next/image';
+import { BeforeAfter } from './before-after';
+import { AppointmentLink } from './appointment-link';
+import { heroVoice } from '@/data/conversion';
 import { useId } from 'react';
-import { ArrowRight } from 'lucide-react';
-import { appointmentUrl, site } from '@/data/site';
+import { site } from '@/data/site';
 import { useCampaignMotion } from './use-campaign-motion';
 
-const metrics = [
-  { value: 'HOF', label: 'ESPECIALISTA' },
-  { value: 'Salvador', label: 'BAHIA' },
-  { value: 'Você', label: 'EM PRIMEIRO LUGAR' },
-];
 
 function SmileSeal() {
   const id = useId().replace(/:/g, '');
@@ -34,30 +30,24 @@ function SmileSeal() {
 
 export function CampaignHero() {
   const motionRef = useCampaignMotion();
-  return <section ref={motionRef} id="inicio" className="campaign" aria-labelledby="campaign-title">
+  return <section ref={motionRef} id="inicio" className="campaign conversion-hero" aria-labelledby="campaign-title">
     <div className="campaign-organic campaign-organic-one" aria-hidden="true"/>
     <div className="campaign-organic campaign-organic-two" aria-hidden="true"/>
     <div className="campaign-contour" aria-hidden="true"/>
     <div className="campaign-inner">
       <div className="campaign-copy">
         <p className="campaign-kicker">HARMONIZAÇÃO OROFACIAL</p>
-        <h1 id="campaign-title" aria-label="Sua beleza em sua essência">
-          <span className="campaign-title-line"><span>SUA BELEZA</span></span>
-          <span className="campaign-title-line"><span>EM SUA</span></span>
-          <span className="campaign-title-line"><span>ESSÊNCIA.</span></span>
-        </h1>
-        <p className="campaign-subtitle">Rejuvenescimento facial com naturalidade.<br/>Um cuidado que respeita quem você é.</p>
-        <div className="campaign-action"><a className="campaign-cta" href={appointmentUrl} target="_blank" rel="noreferrer"><span>AGENDAR AVALIAÇÃO</span><ArrowRight size={22} strokeWidth={1.2}/></a></div>
+        <h1 id="campaign-title"><span className="campaign-title-line"><span>Harmonização facial com <em>naturalidade,</em></span></span><span className="campaign-title-line"><span>estratégia e respeito à individualidade de cada rosto.</span></span></h1>
+        <p className="campaign-subtitle">Cada tratamento começa com uma avaliação individualizada, respeitando seus traços, suas necessidades e aquilo que realmente faz sentido para você.</p>
+        <div className="hero-voice">{heroVoice.pending ? <><span className="pending-caption">Relato da paciente · a inserir</span><p className="content-placeholder" data-placeholder>{heroVoice.quote}</p></> : <blockquote>“{heroVoice.quote}”</blockquote>}</div>
+        <div className="campaign-action"><AppointmentLink id="hero-whatsapp"/></div>
+        <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
-      <figure className="campaign-portrait">
-        <div className="campaign-silhouette"><Image className="campaign-original" src={site.images.hero} alt="Dra. Joelane Bittencourt" fill preload sizes="(max-width:700px) 88vw, (max-width:1100px) 50vw, 48vw"/></div>
-      </figure>
+      <div className="campaign-portrait"><div className="campaign-silhouette">
+        <BeforeAfter record={site.results.items[0]} priority title="Um registro real. Uma história única."/>
+        <p className="hero-result-note">Resultados individuais. Cada pessoa tem características próprias.</p>
+      </div></div>
       <SmileSeal/>
-      <p className="campaign-editorial">Sua beleza.<br/>Sua história.<br/>Sua essência.<span aria-hidden="true"/></p>
-      <div className="campaign-metrics" aria-label="O cuidado da Dra. Joelane">
-        {metrics.map(metric=><div className="campaign-metric" key={metric.value}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
-      </div>
-      <div className="campaign-signature"><span aria-hidden="true"/><div><p>DRA. JOELANE BITTENCOURT</p><em>Harmonização Orofacial · CRO-BA 20242</em></div></div>
     </div>
   </section>;
 }

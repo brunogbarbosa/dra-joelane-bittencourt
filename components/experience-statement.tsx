@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { useEffect, useId, useRef } from 'react';
-import { site } from '@/data/site';
+import { appointmentUrl, site } from '@/data/site';
 import styles from './experience-statement.module.css';
 
 function ImageSeal({ id }: { id: string }) {
@@ -62,20 +62,20 @@ export function ExperienceStatement() {
     };
   }, []);
 
-  return <section ref={root} className={styles.root} aria-labelledby="experience-statement-title">
+  return <section ref={root} className={`${styles.root} evaluation-chapter`} aria-labelledby="experience-statement-title">
     <svg className={styles.thread} viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <path d="M 552 934 C 557 687 678 552 836 475 C 1116 338 1287 119 1648 -18" pathLength="1" vectorEffect="non-scaling-stroke" data-experience-motion="line" />
     </svg>
 
     <header className={styles.topline} data-experience-motion="fade">
-      <p>04 / SUA EXPERIÊNCIA</p>
+      <p>08 / Um convite ao cuidado</p>
       <span aria-hidden="true" />
     </header>
 
     <div className={styles.heading}>
-      <h2 id="experience-statement-title" aria-label="Naturalidade sem excessos.">
-        <span className={styles.titleMask}><span data-experience-motion="title">Naturalidade</span></span>
-        <span className={styles.titleMask}><em data-experience-motion="title">sem excessos.</em></span>
+      <h2 id="experience-statement-title" aria-label="Seu rosto não precisa de uma fórmula pronta.">
+        <span className={styles.titleMask}><span data-experience-motion="title">Seu rosto não precisa</span></span>
+        <span className={styles.titleMask}><em data-experience-motion="title">de uma fórmula pronta.</em></span>
       </h2>
       <p className={styles.subtitle} data-experience-motion="fade">BELEZA COM IDENTIDADE. SEMPRE.</p>
     </div>
@@ -95,16 +95,16 @@ export function ExperienceStatement() {
       <ImageSeal id={uid} />
     </figure>
 
-    <blockquote className={styles.quote} data-experience-motion="quote">
-      <span className={styles.quoteMark} aria-hidden="true">“</span>
-      <div>
-        <p>Mais do que estética,<br />é sobre se sentir bem com quem você é.</p>
-        <footer><span aria-hidden="true" /><cite>O NOSSO OLHAR</cite></footer>
-      </div>
-    </blockquote>
+    <div className={styles.quote} data-experience-motion="quote">
 
-    <a className={styles.cta} href="#experiencia" data-experience-motion="cta">
-      <span>CONHEÇA A EXPERIÊNCIA</span>
+      <div>
+        <p>Precisa de um olhar atento, uma avaliação individualizada e um planejamento pensado para você.</p>
+        <p>Agende sua avaliação e descubra o que realmente faz sentido para o seu rosto.</p>
+      </div>
+    </div>
+
+    <a className={styles.cta} href={appointmentUrl} target="_blank" rel="noopener noreferrer" data-cta="evaluation-whatsapp" data-experience-motion="cta">
+      <span>QUERO AGENDAR MINHA AVALIAÇÃO</span>
       <ArrowUpRight size={25} strokeWidth={1.4} aria-hidden="true" />
     </a>
   </section>;

@@ -36,4 +36,16 @@ npm run typecheck
 npm run build
 ```
 
-Interface preparada para 375, 390, 430, 768, 1024, 1440 e 1920 pixels, navegação por teclado e `prefers-reduced-motion`.
+Interface verificada em 320, 375, 390, 430, 768, 1024, 1280, 1440, 1920 e 2560 pixels, com navegação por teclado e `prefers-reduced-motion`. O projeto não possui comando ou configuração de lint; a validação de código utiliza TypeScript e o build do Next.js.
+
+## Evolução da página — setembro de 2026
+
+O projeto existente foi reorganizado em dez etapas: hero com resultado real, identificação, tratamentos, resultados, método, depoimentos, FAQ, convite à avaliação, apresentação profissional e contato.
+
+`components/chapters.tsx` organiza a sequência. A galeria original foi extraída para `components/result-gallery.tsx`, mantendo ampliação, navegação e comparação. Os três primeiros registros viraram casos destacados; os outros quatro aparecem na galeria complementar. O componente `BeforeAfter` exibe recortes das montagens sem alterar os arquivos originais. No celular, montagens originalmente verticais podem ser empilhadas para melhorar a leitura.
+
+`components/conversion-chapters.tsx` contém as novas seções. `app/conversion.css` estende os estilos existentes. Hero, apresentação profissional, convite editorial, selo, fontes, cores e animações foram reaproveitados. Os princípios da antiga seção de essência e as etapas da experiência foram incorporados ao método; o arquivo `essence-chapter.tsx` permanece preservado como referência, sem duplicar a seção na página. Nenhum asset foi excluído nesta evolução.
+
+Todos os CTAs de agendamento usam o mesmo WhatsApp e possuem `data-cta`; nenhuma ferramenta de analytics foi instalada. OG e favicon permanecem preservados.
+
+As informações pendentes estão em `data/conversion.ts`, são exibidas explicitamente entre colchetes e estão documentadas em [CONTEUDO-PENDENTE.md](CONTEUDO-PENDENTE.md).
