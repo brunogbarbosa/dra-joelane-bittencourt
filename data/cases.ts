@@ -13,7 +13,7 @@ const pending = {
 };
 
 // Ordem confirmada pelo usuário. Caso 2 não tem cronologia informada.
-export const clinicalCases: ClinicalCase[] = [
+export const heroCase: ClinicalCase =
   { id: 'caso-1', title: 'Full Face', mode: 'comparison', ...pending, editorial: [
     ['O foco', 'Full Face: um olhar para o rosto como um todo.'],
     ['O registro', 'Antes e depois compartilhados pela Dra. Joelane. Cada fotografia faz parte da história dessa paciente.'],
@@ -21,6 +21,17 @@ export const clinicalCases: ClinicalCase[] = [
   ], photos: [
     { src:'/images/caso-1-antes-revisado.webp', label:'Antes', alt:'Caso 1: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'center' },
     { src:'/images/caso-1-depois-revisado.webp', label:'Depois', alt:'Caso 1: registro após o tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'center' },
+  ]};
+
+// Roseli aparece somente na abertura; os estudos exploram outros pacientes.
+export const clinicalCases: ClinicalCase[] = [
+  { id: 'cris', title: 'Um olhar após o emagrecimento', mode: 'comparison', ...pending, editorial: [
+    ['A história', 'Cris passou por uma perda importante de peso, conforme o relato da Dra. Joelane.'],
+    ['O olhar', 'Mudanças no rosto após o emagrecimento fazem parte das questões que podem ser acolhidas na avaliação individualizada.'],
+    ['O registro', 'Antes e depois compartilhados pela profissional. O planejamento respeita as características e a história de cada paciente.'],
+  ], photos: [
+    { src:'/images/cris-antes.webp', label:'Antes', alt:'Cris: fotografia anterior, fornecida pela Dra. Joelane', width:613, height:1327, position:'center' },
+    { src:'/images/cris-depois.webp', label:'Depois', alt:'Cris: fotografia posterior, fornecida pela Dra. Joelane', width:671, height:1327, position:'center' },
   ]},
   { id: 'caso-2', title: 'Desarmonização', mode: 'reference', ...pending, editorial: [
     ['O tema', 'Desarmonização: registros selecionados pela Dra. Joelane para apresentar esse tema.'],

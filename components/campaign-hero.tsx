@@ -1,7 +1,7 @@
 'use client';
 
 import { CasePhotos } from './case-photos';
-import { clinicalCases } from '@/data/cases';
+import { heroCase } from '@/data/cases';
 import { AppointmentLink } from './appointment-link';
 import { heroVoice } from '@/data/conversion';
 import { useId } from 'react';
@@ -45,7 +45,7 @@ export function CampaignHero() {
       </div>
       <div className="campaign-portrait"><div className="campaign-silhouette">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
-        <CasePhotos record={clinicalCases[0]} priority/>
+        <CasePhotos record={heroCase} priority/>
         <p className="hero-result-note">Resultados individuais. Fotografias fornecidas pela profissional.</p>
       </div></div>
       <SmileSeal/>

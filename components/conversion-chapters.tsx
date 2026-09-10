@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import { useId, useState } from 'react';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Plus, Stethoscope } from 'lucide-react';
+import { ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Plus, Stethoscope } from 'lucide-react';
 import { site, appointmentUrl } from '@/data/site';
-import { painPoints, treatments, careSteps, patientVoices, questions, contactDetails } from '@/data/conversion';
-import { BeforeAfter } from './before-after';
+import { painPoints, treatments, careSteps, questions, contactDetails } from '@/data/conversion';
+export { Testimonials } from './testimonials';
 import { AppointmentLink } from './appointment-link';
 
 export function PainPoints() {
@@ -37,34 +37,16 @@ export function Treatments() {
 export function CareMethod() {
   return <section id="metodo" className="care-chapter conversion-section" aria-labelledby="care-title">
     <p className="chapter-tag">05 / Critério · Planejamento · Identidade</p>
-    <div className="care-heading"><h2 id="care-title" data-reveal>O meu jeito<br/><em>de cuidar</em></h2><div className="care-manifesto" data-reveal>
+    <div className="care-heading"><h2 id="care-title" data-reveal>O meu jeito<br/><em>de cuidar</em></h2></div>
+    <div className="care-body"><figure className="care-photo"><div className="care-photo-image"><Image src={site.images.about} alt="Dra. Joelane Bittencourt durante o planejamento no consultório" fill sizes="(max-width:700px) 88vw, 44vw"/></div></figure>
+    <div className="care-content"><div className="care-manifesto" data-reveal>
       <p>Um resultado bonito não depende apenas da quantidade de produto utilizada.</p>
       <p>Depende de entender estrutura, proporções, envelhecimento e aquilo que realmente precisa ser tratado.</p>
       <p>Por isso, meu trabalho não segue fórmulas prontas ou protocolos iguais para todos os pacientes.</p>
       <p>Cada indicação parte de uma avaliação individualizada e de um planejamento pensado para o seu rosto.</p>
-    </div></div>
-    <div className="care-body"><figure className="care-photo"><Image src={site.images.about} alt="Dra. Joelane Bittencourt durante o planejamento no consultório" fill sizes="(max-width:700px) 88vw, 39vw"/></figure>
+    </div>
       <div className="ritual-list">{careSteps.map(([title,copy],i)=><article key={title} data-reveal><span>0{i+1}</span><div><h3>{title}</h3><p>{copy}</p></div><ArrowUpRight size={22} strokeWidth={1}/></article>)}</div>
-    </div>
-  </section>;
-}
-
-export function Testimonials() {
-  const [index,setIndex]=useState(0); const voice=patientVoices[index];
-  return <section id="depoimentos" className="testimonials-chapter conversion-section" aria-labelledby="testimonials-title">
-    <p className="chapter-tag">06 / Experiências compartilhadas</p><h2 id="testimonials-title" data-reveal>O que meus<br/><em>pacientes dizem</em></h2>
-    <div className="voice-stage" aria-live="polite" aria-atomic="true">
-      {voice.photo&&<Image className="voice-photo" src={voice.photo} alt={voice.photoAlt||'Retrato autorizado da paciente'} width={96} height={96}/>}
-      {voice.pending?<div className="voice-pending"><span className="editorial-index">RELATO 0{index+1} / A INSERIR</span><p className="content-placeholder" data-placeholder>{voice.quote}</p></div>:<blockquote>“{voice.quote}”</blockquote>}
-      {voice.name&&<p className="voice-name">{voice.name}</p>}{voice.objective&&<p>{voice.objective}</p>}
-      {voice.sourceUrl&&<a className="review-source" href={voice.sourceUrl} target="_blank" rel="noopener noreferrer">Ler avaliação no Google<ArrowUpRight size={16} aria-hidden="true"/></a>}
-      {voice.resultIndex!==undefined&&<BeforeAfter record={site.results.items[voice.resultIndex]}/>}
-    </div>
-    <p className="voice-context">Trechos de avaliações públicas no Google. Experiências individuais, sem vínculo presumido com as fotografias dos casos.</p>
-    <div className="voice-navigation"><button className="viewer-icon" aria-label="Depoimento anterior" onClick={()=>setIndex((index+patientVoices.length-1)%patientVoices.length)}><ArrowLeft/></button>
-      <div role="group" aria-label="Selecionar depoimento">{patientVoices.map((v,i)=><button key={v.id} aria-label={`Depoimento ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>0{i+1}</button>)}</div>
-      <button className="viewer-icon" aria-label="Próximo depoimento" onClick={()=>setIndex((index+1)%patientVoices.length)}><ArrowRight/></button>
-    </div>
+    </div></div>
   </section>;
 }
 
