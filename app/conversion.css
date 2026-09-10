@@ -70,7 +70,7 @@
 .care-body { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; margin-top: 55px; align-items: center; }
 .care-photo { position: relative; aspect-ratio: 4/5; border-radius: 100px 100px 16px 16px; overflow: hidden; }
 .care-photo img { object-fit: cover; object-position: 50% 25%; }
-.case-photos.case-photos-caso-1 .case-photo-frame { aspect-ratio: 4/5; }
+.case-photos.case-photos-caso-1 .case-photo-frame { aspect-ratio: 1; }
 .care-body .ritual-list { margin: 0; }
 .care-body .ritual-list article { padding: 26px 0; }
 .testimonials-chapter { text-align: center; }
@@ -264,7 +264,7 @@
 .conversion-hero .campaign-seal { display: none; }
 .conversion-hero .comparison-title { text-align: center; }
 .conversion-hero .hero-result-note { text-align: center; }
-.case-photos.case-photos-cris .case-photo-frame { aspect-ratio: 1/2; }
+.case-media .case-photo-frame { aspect-ratio: 1/2; }
 .case-layout { grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); align-items: center; }
 
 /* The portrait starts beside the manifesto, without an empty title column. */
@@ -330,7 +330,19 @@
  .reviews-controls { align-items: flex-start; }
  .reviews-controls>span { max-width: 160px; font-size: 20px; }
  .reviews-controls>div { gap: 5px; }
- .case-photos.case-photos-cris .case-photo-frame { aspect-ratio: 1/2; }
+ .case-media .case-photo-frame { aspect-ratio: 1/2; }
 }
 .conversion-hero .campaign-action { margin-inline: auto; }
 @media(max-width:700px) { .conversion-hero .campaign-action { width: 100%; margin-inline: 0; } }
+
+.conversion-hero .hero-contact { display: flex; flex-direction: column; align-items: center; gap: 12px; width: min(100%,440px); }
+.conversion-hero .hero-booking { width: 100%; min-height: 100px; padding: 22px 30px; justify-content: center; gap: 22px; }
+.hero-booking>span { display: flex; flex-direction: column; gap: 4px; font-size: 23px; line-height: 1.25; font-weight: 600; letter-spacing: .035em; text-align: center; }
+.hero-booking>svg { flex-shrink: 0; width: 26px; height: 26px; }
+.hero-phone { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 58px; padding: 12px 18px; border: 1px solid var(--rose); border-radius: 40px; color: var(--rose-deep); font-size: 23px; font-weight: 600; letter-spacing: .02em; transition: background .2s; }
+.hero-phone:hover { background: var(--rose-light); }
+@media(max-width:700px) {
+ .conversion-hero .hero-booking { min-height: 94px; padding: 20px 18px; gap: 14px; }
+ .hero-booking>span { font-size: clamp(18px,5.2vw,23px); }
+ .hero-phone { font-size: clamp(20px,5.5vw,23px); }
+}

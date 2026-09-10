@@ -4,6 +4,8 @@ import { CasePhotos } from './case-photos';
 import { heroCase } from '@/data/cases';
 import { AppointmentLink } from './appointment-link';
 import { heroVoice } from '@/data/conversion';
+import { appointmentUrl, site } from '@/data/site';
+import { Phone } from 'lucide-react';
 import { useId } from 'react';
 import { useCampaignMotion } from './use-campaign-motion';
 
@@ -40,7 +42,10 @@ export function CampaignHero() {
         <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
         <p className="campaign-subtitle">Cada rosto possui uma estrutura, uma história e necessidades próprias. Por isso, antes de qualquer procedimento, meu trabalho começa com avaliação, planejamento e um olhar individualizado para preservar quem você é.</p>
         <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><a className="review-source" href={heroVoice.sourceUrl} target="_blank" rel="noopener noreferrer">{heroVoice.name} · Avaliação no Google</a></div>
-        <div className="campaign-action"><AppointmentLink id="hero-whatsapp"/></div>
+        <div className="campaign-action hero-contact">
+          <AppointmentLink id="hero-whatsapp" className="hero-booking"><span>QUERO AGENDAR</span><span>MINHA AVALIAÇÃO</span></AppointmentLink>
+          <a className="hero-phone" href={appointmentUrl} target="_blank" rel="noopener noreferrer" data-cta="hero-phone-whatsapp" aria-label={`Agendar pelo WhatsApp: ${site.phone}`}><Phone size={23} aria-hidden="true"/><span>{site.phone.replace('+55 ', '')}</span></a>
+        </div>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
       <div className="campaign-portrait"><div className="campaign-silhouette">

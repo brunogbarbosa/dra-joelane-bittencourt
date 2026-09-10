@@ -4,10 +4,13 @@
 
 - Horários confirmados pelo usuário: segunda a sexta, 9h–18h. Sábado, 9h–13h, mediante agendamento. Qualificação de demanda retirada a pedido do usuário.
 - Os dois áudios foram transcritos localmente. Pedem alinhamento do antes/depois, retirada do fundo do depois, bordas retas e ausência de espaço entre as fotos.
-- Todos os pares usam molduras retas e imagens unidas. O hero utiliza as duas fotos revisadas de Roseli, em proporção 4:5, ampliadas abaixo do texto. A máscara anterior não é mais aplicada. As versões antigas permanecem nos assets para histórico.
+- Todos os pares usam molduras retas e imagens unidas. O hero utiliza as duas fotos revisadas de Roseli, com enquadramento aproximado e molduras quadradas, ampliadas abaixo do texto. A máscara anterior não é mais aplicada. As versões antigas permanecem nos assets para histórico.
 - Roseli não se repete nos estudos de caso. O primeiro caso destacado agora é Cris, com o contexto de emagrecimento informado pela Dra. e o antes/depois da montagem enviada pelo usuário. As duas metades foram separadas e otimizadas em WebP, sem retoque do rosto.
 - Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O hero utiliza Roseli Bittencourt, cuja correspondência com a paciente do caso 1 foi confirmada pelo usuário. Fonte: https://share.google/rW4Rqi9Fnfw0owdky
 - As apresentações editoriais dos três casos foram redigidas com os temas confirmados e a filosofia fornecida pela profissional. Não foram inventados procedimentos, doses, queixas ou resultados clínicos.
+
+- Ajuste das 16h: os três casos compartilham a mesma proporção 1:2 por fotografia, mantendo altura igual em cada largura de tela. O zoom dos casos 2 e 3 foi ajustado para preservar o foco nos rostos; a ampliação continua mostrando as fotos completas.
+- Áudios das 16h03: botão do hero maior, em duas linhas, nas cores existentes, com telefone visível e clicável abaixo. A frase de fechamento da identificação permanece menor, separada da lista e com destaque discreto.
 
 ## Fontes dos depoimentos
 
@@ -33,8 +36,8 @@ As quatro avaliações aparecem em um carrossel com estrelas, iniciais e links p
 
 | Caso | Arquivo recebido | Uso |
 | --- | --- | --- |
-| Hero — Roseli | codex-clipboard-5a191241-7cb4-41b8-9967-7945ae22a6e7.png | Antes — caso-1-antes-revisado.webp |
-| Hero — Roseli | codex-clipboard-624347c8-b5c6-4478-ada2-c430c3524200.png | Depois — caso-1-depois-revisado.webp |
+| Hero — Roseli | codex-clipboard-111e7d4b-0d23-4f21-b7c3-94bd91b64680.png | Antes — roseli-antes-rosto.webp |
+| Hero — Roseli | codex-clipboard-96f8f93e-e7b9-4319-a3e2-54327ee7e14e.png | Depois — roseli-depois-rosto.webp |
 | 1 — Cris | codex-clipboard-76d1e040-c8e3-4e06-b2fc-609f7f92637f.png | Metade esquerda: cris-antes.webp; metade direita: cris-depois.webp |
 | 2 | caso 2 (1).PNG | Desarmonização, Registro 01 — caso-2-a.webp |
 | 2 | caso 2.jpeg | Desarmonização, Registro 02 — caso-2-b.webp |
@@ -45,4 +48,4 @@ O caso 2 não possui cronologia confirmada. Os sete registros antigos permanecem
 
 ## Identificadores de CTA
 
-`header-whatsapp`, `hero-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`. Nenhuma ferramenta de analytics foi instalada.
+`header-whatsapp`, `hero-whatsapp`, `hero-phone-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`. Nenhuma ferramenta de analytics foi instalada.
