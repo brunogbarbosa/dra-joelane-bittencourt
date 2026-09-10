@@ -5,7 +5,7 @@ export type PatientVoice = {
 };
 export const googleReviewsUrl = 'https://share.google/WqcmKMWTbYfE0un8z';
 // Trecho conferido no Google; vínculo com a paciente do caso 1 confirmado pelo usuário.
-export const heroVoice: PatientVoice = { id: 'hero', quote: 'A minha experiência foi ótima, um atendimento perfeito o local totalmente aconchegante e organizado.', name: 'Roseli Bittencourt', sourceUrl: 'https://share.google/rW4Rqi9Fnfw0owdky', resultIndex: 0, pending: false };
+export const heroVoice: PatientVoice = { id: 'hero', quote: 'A minha experiência foi ótima, um atendimento perfeito o local totalmente aconchegante e organizado.', name: 'Roseli', sourceUrl: 'https://share.google/rW4Rqi9Fnfw0owdky', resultIndex: 0, pending: false };
 // Transcrições/trechos literais dos prints enviados dos destaques de depoimentos.
 // Sem nomes, fotos ou vínculo com casos: a correspondência ainda não foi informada.
 export const instagramVoices: PatientVoice[] = [
