@@ -341,6 +341,11 @@
 .hero-booking>svg { flex-shrink: 0; width: 26px; height: 26px; }
 .hero-phone { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 58px; padding: 12px 18px; border: 1px solid var(--rose); border-radius: 40px; color: var(--rose-deep); font-size: 23px; font-weight: 600; letter-spacing: .02em; transition: background .2s; }
 .hero-phone:hover { background: var(--rose-light); }
+@media (max-width:1100px), (max-width:1366px) and (pointer:coarse) {
+ .conversion-hero .campaign-portrait { width: calc(100vw - 24px); max-width: 1280px; }
+ .conversion-hero .case-photos-caso-1 .case-photo-frame { aspect-ratio: 4/5; }
+ .conversion-hero .comparison-title,.conversion-hero .hero-result-note { padding-inline: 4vw; }
+}
 @media(max-width:700px) {
  .conversion-hero .hero-booking { min-height: 94px; padding: 20px 18px; gap: 14px; }
  .hero-booking>span { font-size: clamp(18px,5.2vw,23px); }

@@ -12,7 +12,7 @@ const pending = {
   planning: '[INSERIR PLANEJAMENTO]', outcome: '[INSERIR RESULTADO]',
 };
 
-// Ordem confirmada pelo usuário. Caso 2 não tem cronologia informada.
+// Ordem de antes/depois confirmada pelo usuário, incluindo o caso 2.
 export const heroCase: ClinicalCase =
   { id: 'caso-1', title: 'Full Face', mode: 'comparison', ...pending, editorial: [
     ['O foco', 'Full Face: um olhar para o rosto como um todo.'],
@@ -33,13 +33,13 @@ export const clinicalCases: ClinicalCase[] = [
     { src:'/images/cris-antes.webp', label:'Antes', alt:'Cris: fotografia anterior, fornecida pela Dra. Joelane', width:613, height:1327, position:'center' },
     { src:'/images/cris-depois.webp', label:'Depois', alt:'Cris: fotografia posterior, fornecida pela Dra. Joelane', width:671, height:1327, position:'center' },
   ]},
-  { id: 'caso-2', title: 'Desarmonização', mode: 'reference', ...pending, editorial: [
-    ['O tema', 'Desarmonização: registros selecionados pela Dra. Joelane para apresentar esse tema.'],
+  { id: 'caso-2', title: 'Desarmonização', mode: 'comparison', ...pending, editorial: [
+    ['O tema', 'Desarmonização: antes e depois compartilhados pela Dra. Joelane.'],
     ['Um olhar individual', 'Nem sempre aquilo que o paciente acredita precisar é o que realmente faz sentido para o seu rosto.'],
     ['A filosofia do cuidado', 'Cada indicação parte de uma avaliação individualizada e de um planejamento pensado para o seu rosto.'],
   ], photos: [
-    { src:'/images/caso-2-a.webp', label:'Registro 01', alt:'Caso 2, desarmonização: registro com roupa preta, sem cronologia informada', width:1320, height:1739, position:'50% 38%', zoom:1.43, zoomOrigin:'48% 18%' },
-    { src:'/images/caso-2-b.webp', label:'Registro 02', alt:'Caso 2, desarmonização: registro com roupa branca, sem cronologia informada', width:1100, height:1429, position:'50% 40%', zoom:1.43, zoomOrigin:'48% 19%' },
+    { src:'/images/caso-2-a.webp', label:'Antes', alt:'Caso 2, desarmonização: antes, paciente com roupa preta', width:1320, height:1739, position:'50% 38%', zoom:1.9, zoomOrigin:'48% 8%' },
+    { src:'/images/caso-2-b.webp', label:'Depois', alt:'Caso 2, desarmonização: depois, paciente com roupa branca', width:1100, height:1429, position:'50% 40%', zoom:1.9, zoomOrigin:'48% 11%' },
   ]},
   { id: 'caso-3', title: 'Planejamento facial', mode: 'comparison', ...pending, editorial: [
     ['O registro', 'Antes e depois de um paciente, compartilhados pela Dra. Joelane.'],

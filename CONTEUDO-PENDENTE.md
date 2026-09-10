@@ -28,7 +28,7 @@ As quatro avaliações aparecem em um carrossel com estrelas, iniciais e links p
 
 - Caso a Dra. queira a ficha clínica detalhada, confirmar queixa, observação, planejamento e resultado de cada caso. Esses campos continuam preparados em `data/cases.ts`; a página exibe o texto editorial até todos os campos do caso serem preenchidos. Não há placeholders visíveis na página.
 - Ensaio atualizado em 10/09: IMG_0451 na apresentação da Dra., IMG_0446 no método e IMG_3561 na avaliação. Cada foto aparece uma única vez; versões WebP otimizadas, sem alteração de conteúdo.
-- Caso 2: enquadramentos aproximados para destacar os rostos. O visualizador preserva os registros completos e os rótulos sem cronologia presumida.
+- Caso 2: enquadramentos aproximados para destacar os rostos. O visualizador preserva as fotografias completas, com os rótulos Antes e Depois confirmados pelo usuário.
 - Torre/bloco, andar e sala do Hangar, se aplicáveis.
 - Domínio próprio definitivo, se houver, em `site.seo.url`.
 
@@ -39,13 +39,18 @@ As quatro avaliações aparecem em um carrossel com estrelas, iniciais e links p
 | Hero — Roseli | codex-clipboard-111e7d4b-0d23-4f21-b7c3-94bd91b64680.png | Antes — roseli-antes-rosto.webp |
 | Hero — Roseli | codex-clipboard-96f8f93e-e7b9-4319-a3e2-54327ee7e14e.png | Depois — roseli-depois-rosto.webp |
 | 1 — Cris | codex-clipboard-76d1e040-c8e3-4e06-b2fc-609f7f92637f.png | Metade esquerda: cris-antes.webp; metade direita: cris-depois.webp |
-| 2 | caso 2 (1).PNG | Desarmonização, Registro 01 — caso-2-a.webp |
-| 2 | caso 2.jpeg | Desarmonização, Registro 02 — caso-2-b.webp |
+| 2 | caso 2 (1).PNG | Desarmonização, Antes — caso-2-a.webp |
+| 2 | caso 2.jpeg | Desarmonização, Depois — caso-2-b.webp |
 | 3 | caso 3.DNG | Antes — caso-3-a.webp |
 | 3 | caso 3.HEIC | Depois — caso-3-b.webp |
 
-O caso 2 não possui cronologia confirmada. Os sete registros antigos permanecem na galeria complementar. As fotos da Dra. permanecem sem repetição entre as seções.
+A ordem do caso 2 foi confirmada pelo usuário: roupa preta antes, roupa branca depois. Os sete registros antigos permanecem na galeria complementar. As fotos da Dra. permanecem sem repetição entre as seções.
 
 ## Identificadores de CTA
 
 `header-whatsapp`, `hero-whatsapp`, `hero-phone-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`. Nenhuma ferramenta de analytics foi instalada.
+
+## Último ajuste de enquadramento
+
+- Caso 2: antes/depois confirmados e aproximação maior dos rostos, preservando as alturas iguais dos três casos.
+- Hero ampliado apenas em celular e tablet/iPad; composição de desktop preservada.
