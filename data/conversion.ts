@@ -15,9 +15,10 @@ export const instagramVoices: PatientVoice[] = [
 ];
 // Trechos conferidos no Google em 10/09/2026. Não vinculados às fotos dos casos.
 export const patientVoices: PatientVoice[] = [
+  { ...instagramVoices[2], id: 'google-renan', name: 'Renan Nunes', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s102058650109724459172!2s0x7161bb64079fae3:0xff57dc0e6d2d8305' },
   { id: 'google-jonathas', name: 'Jonathas Mota', quote: 'Sou grato pela sua atenção e dedicação.', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s113626764259642265117!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false },
   { id: 'google-diego', quote: 'Nota 1000, excelente profissional.', name: 'Diego Matheus Mendes dos Santos', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s109890063617594263457!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false },
-  { ...instagramVoices[2], id: 'google-renan', name: 'Renan Nunes', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s102058650109724459172!2s0x7161bb64079fae3:0xff57dc0e6d2d8305' },
+
 ];
 export const painPoints = [
   'Começou a perceber mudanças no rosto.', 'Sente que parece cansada.',
@@ -38,7 +39,7 @@ export const careSteps = [
   ['Cuidar além do procedimento', 'Dependendo da necessidade, o planejamento pode envolver uma visão mais ampla do paciente e do processo de envelhecimento.'],
 ];
 export const questions = [
-  { question: 'Tenho medo de ficar artificial. Como você trabalha?', answer: 'Naturalidade não significa não perceber resultado. Significa buscar equilíbrio, respeitando seus traços e evitando excessos.' },
+  { question: 'Tenho medo de ficar artificial. Como você trabalha?', answer: 'Naturalidade não significa ausência de resultado. Significa alcançar mudanças que façam sentido para o seu rosto, respeitando seus traços e evitando excessos.' },
   { question: 'Como sei o que preciso fazer?', answer: 'Você não precisa chegar sabendo qual procedimento deseja. A avaliação existe justamente para entender suas queixas e definir o que realmente faz sentido para você.' },
   { question: 'Preciso fazer tudo de uma vez?', answer: 'Não. Um planejamento pode ser construído por etapas, respeitando suas necessidades, prioridades e o momento de cada paciente.' },
   { question: 'Como funciona a avaliação?', answer: 'Na avaliação, conversamos sobre suas queixas, expectativas e histórico. Analiso o rosto, suas proporções e aquilo que pode fazer sentido dentro de um planejamento individualizado.' },

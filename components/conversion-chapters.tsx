@@ -23,9 +23,7 @@ export function Treatments() {
   return <section id="tratamentos" className="treatments-chapter conversion-section" aria-labelledby="treatments-title">
     <div className="treatments-intro"><p className="chapter-tag">03 / Possibilidades de cuidado</p>
       <h2 id="treatments-title" data-reveal>Possibilidades<br/><em>de tratamento</em></h2>
-      <p className="treatments-lead">O ponto de partida é o que o seu rosto precisa.</p>
-      <p>Harmonização Orofacial em Salvador, com avaliação individualizada e planejamento para cada indicação.</p>
-      <p className="treatments-context">Do preenchimento facial ao rejuvenescimento, cada possibilidade tem um propósito dentro do seu planejamento.</p>
+      <p className="treatments-lead">Cada possibilidade tem um propósito, definido a partir da sua avaliação.</p>
       <div className="treatment-signature" aria-hidden="true"><span>JB</span><i/>ESTRUTURA · PROPORÇÃO · IDENTIDADE</div>
     </div>
     <div className="treatments-options"><ol>{treatments.map(([title,copy],i)=><li key={title} data-reveal><span className="editorial-index">0{i+1}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol>
@@ -37,15 +35,11 @@ export function Treatments() {
 export function CareMethod() {
   return <section id="metodo" className="care-chapter conversion-section" aria-labelledby="care-title">
     <p className="chapter-tag">05 / Critério · Planejamento · Identidade</p>
+    <div className="care-intro" data-reveal><p>Um resultado bonito não depende apenas da quantidade de produto utilizada.</p><p>Depende de entender estrutura, proporções, envelhecimento e aquilo que realmente precisa ser tratado.</p></div>
     <div className="care-heading"><h2 id="care-title" data-reveal>O meu jeito<br/><em>de cuidar</em></h2></div>
     <div className="care-body"><figure className="care-photo"><div className="care-photo-image"><Image src={site.images.about} alt="Dra. Joelane Bittencourt durante o planejamento no consultório" fill sizes="(max-width:700px) 88vw, 44vw"/></div></figure>
-    <div className="care-content"><div className="care-manifesto" data-reveal>
-      <p>Um resultado bonito não depende apenas da quantidade de produto utilizada.</p>
-      <p>Depende de entender estrutura, proporções, envelhecimento e aquilo que realmente precisa ser tratado.</p>
-      <p>Por isso, meu trabalho não segue fórmulas prontas ou protocolos iguais para todos os pacientes.</p>
-      <p>Cada indicação parte de uma avaliação individualizada e de um planejamento pensado para o seu rosto.</p>
-    </div>
-      <div className="ritual-list">{careSteps.map(([title,copy],i)=><article key={title} data-reveal><span>0{i+1}</span><div><h3>{title}</h3><p>{copy}</p></div><ArrowUpRight size={22} strokeWidth={1}/></article>)}</div>
+    <div className="care-content">
+      <div className="care-details">{careSteps.map(([title,copy],i)=><details key={title} open={i===0}><summary><span className="editorial-index">0{i+1}</span><h3>{title}</h3><Plus size={20} aria-hidden="true"/></summary><p>{copy}</p></details>)}</div>
     </div></div>
   </section>;
 }

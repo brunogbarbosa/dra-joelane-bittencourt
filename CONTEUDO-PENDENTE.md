@@ -6,8 +6,8 @@
 - Os dois áudios foram transcritos localmente. Pedem alinhamento do antes/depois, retirada do fundo do depois, bordas retas e ausência de espaço entre as fotos.
 - Todos os pares usam molduras retas e imagens unidas. O hero utiliza as duas fotos revisadas de Roseli, com enquadramento aproximado e molduras quadradas, ampliadas abaixo do texto. A máscara anterior não é mais aplicada. As versões antigas permanecem nos assets para histórico.
 - Roseli não se repete nos estudos de caso. O primeiro caso destacado agora é Cris, com o contexto de emagrecimento informado pela Dra. e o antes/depois da montagem enviada pelo usuário. As duas metades foram separadas e otimizadas em WebP, sem retoque do rosto.
-- Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O hero utiliza Roseli Bittencourt, cuja correspondência com a paciente do caso 1 foi confirmada pelo usuário. Fonte: https://share.google/rW4Rqi9Fnfw0owdky
-- As apresentações editoriais dos três casos foram redigidas com os temas confirmados e a filosofia fornecida pela profissional. Não foram inventados procedimentos, doses, queixas ou resultados clínicos.
+- Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O hero utiliza apenas o nome Roseli, cuja correspondência com a paciente foi confirmada pelo usuário. Fonte: https://share.google/rW4Rqi9Fnfw0owdky
+- As apresentações dos três casos utilizam os textos enviados pela Dra. na atualização da noite de 10/09: A história, O olhar e O resultado, para Cris, Bruna e Luciano.
 
 - Ajuste das 16h: os três casos compartilham a mesma proporção 1:2 por fotografia, mantendo altura igual em cada largura de tela. O zoom dos casos 2 e 3 foi ajustado para preservar o foco nos rostos; a ampliação continua mostrando as fotos completas.
 - Áudios das 16h03: botão do hero maior, em duas linhas, nas cores existentes, com telefone visível e clicável abaixo. A frase de fechamento da identificação permanece menor, separada da lista e com destaque discreto.
@@ -26,7 +26,7 @@ As quatro avaliações aparecem em um carrossel com estrelas, iniciais e links p
 
 ## Pendências profissionais
 
-- Caso a Dra. queira a ficha clínica detalhada, confirmar queixa, observação, planejamento e resultado de cada caso. Esses campos continuam preparados em `data/cases.ts`; a página exibe o texto editorial até todos os campos do caso serem preenchidos. Não há placeholders visíveis na página.
+- Os textos dos três casos já foram fornecidos pela Dra. e incorporados. Os campos opcionais de ficha clínica detalhada permanecem preparados em `data/cases.ts`, sem necessidade de preenchimento para a apresentação atual. Não há placeholders visíveis na página.
 - Ensaio atualizado em 10/09: IMG_0451 na apresentação da Dra., IMG_0446 no método e IMG_3561 na avaliação. Cada foto aparece uma única vez; versões WebP otimizadas, sem alteração de conteúdo.
 - Caso 2: enquadramentos aproximados para destacar os rostos. O visualizador preserva as fotografias completas, com os rótulos Antes e Depois confirmados pelo usuário.
 - Torre/bloco, andar e sala do Hangar, se aplicáveis.
@@ -39,12 +39,12 @@ As quatro avaliações aparecem em um carrossel com estrelas, iniciais e links p
 | Hero — Roseli | codex-clipboard-111e7d4b-0d23-4f21-b7c3-94bd91b64680.png | Antes — roseli-antes-rosto.webp |
 | Hero — Roseli | codex-clipboard-96f8f93e-e7b9-4319-a3e2-54327ee7e14e.png | Depois — roseli-depois-rosto.webp |
 | 1 — Cris | codex-clipboard-76d1e040-c8e3-4e06-b2fc-609f7f92637f.png | Metade esquerda: cris-antes.webp; metade direita: cris-depois.webp |
-| 2 | caso 2 (1).PNG | Desarmonização, Antes — caso-2-a.webp |
+| 2 — Bruna | codex-clipboard-2138dc11-5266-4c67-a801-e5013a43a072.png | Antes atualizado — bruna-antes.webp |
 | 2 | caso 2.jpeg | Desarmonização, Depois — caso-2-b.webp |
 | 3 | caso 3.DNG | Antes — caso-3-a.webp |
 | 3 | caso 3.HEIC | Depois — caso-3-b.webp |
 
-A ordem do caso 2 foi confirmada pelo usuário: roupa preta antes, roupa branca depois. Os sete registros antigos permanecem na galeria complementar. As fotos da Dra. permanecem sem repetição entre as seções.
+A ordem do caso 2 foi confirmada pelo usuário. A foto do antes foi substituída pelo novo retrato de óculos enviado à noite; o depois permanece o registro de roupa branca. Os sete registros antigos permanecem na galeria complementar. As fotos da Dra. permanecem sem repetição entre as seções.
 
 ## Identificadores de CTA
 
@@ -54,3 +54,12 @@ A ordem do caso 2 foi confirmada pelo usuário: roupa preta antes, roupa branca 
 
 - Caso 2: antes/depois confirmados e aproximação maior dos rostos, preservando as alturas iguais dos três casos.
 - Hero ampliado apenas em celular e tablet/iPad; composição de desktop preservada.
+
+## Atualização da noite — conteúdo mais enxuto
+
+- Título do hero reduzido somente em celular e tablet/iPad; tamanho do computador preservado.
+- Introduções condensadas, espaçamentos menores e detalhes do método, avaliação e apresentação profissional disponíveis para expansão acessível.
+- Áudio das 19h56 transcrito localmente: a Dra. pede diferenciação visual da frase de fechamento da identificação, sugerindo caixa marrom escura. Aplicado sem mudar a frase.
+- Depoimentos na ordem Renan, Jonathas, Diego, seguidos de Roseli.
+- Resposta sobre naturalidade, credenciais profissionais e lista de tratamentos atualizadas com o texto enviado pela Dra.
+- Nova foto do antes de Bruna otimizada em WebP, mantendo o arquivo anterior no projeto.

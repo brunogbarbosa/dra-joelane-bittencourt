@@ -80,7 +80,7 @@ export function AuthorChapter() {
           <span className={styles.titleMask}><span data-author-motion="title">Bittencourt</span></span>
 
         </h2>
-        <p className={styles.subcopy} data-author-motion="subcopy">Cirurgiã-dentista e especialista em Harmonização Orofacial.<br/>{site.cro}<br/>Atendimento em Salvador — Bahia</p>
+        <p className={styles.subcopy} data-author-motion="subcopy">Cirurgiã-dentista · {site.cro}<br/>Especialista em Harmonização Orofacial<br/>Atuação voltada ao rejuvenescimento facial e planejamento Full Face</p>
       </div>
 
       <figure className={styles.photo} data-author-motion="photo">
@@ -94,7 +94,8 @@ export function AuthorChapter() {
 
       <article className={styles.card} data-author-motion="card">
         <p className={styles.cardLabel}>DRA. JOELANE BITTENCOURT</p>
-        <p className={styles.cardCopy}>{biography}</p>
+        <p className={styles.cardCopy}>Acredito em resultados construídos com critério, planejamento e respeito à identidade de cada paciente.</p>
+        <details className="professional-details"><summary>Minha abordagem</summary><p>{biography}</p></details>
         <a className={styles.cta} href={site.instagram} target="_blank" rel="noreferrer">
           <span>Conheça meu trabalho</span>
           <span className={styles.ctaCircle} aria-hidden="true"><ArrowUpRight size={24} strokeWidth={1.25} /></span>
@@ -142,7 +143,7 @@ export function AuthorChapter() {
         </p>
         <div className={styles.closingSeal}><span aria-hidden="true" /><BrandSeal id={uid} /></div>
       </div>
-      <p className={styles.closingNote} data-author-motion="final">Escuta, presença e intenção em cada detalhe.</p>
+      <div className="professional-treatments"><p>Entre as possibilidades de tratamento estão:</p><ul>{['Harmonização Facial','Botox','Preenchimento Facial','Bioestimuladores','Fios de PDO','Rejuvenescimento Facial','Tratamentos para qualidade da pele'].map(item=><li key={item}>{item}</li>)}</ul></div>
     </footer>
   </section>;
 }

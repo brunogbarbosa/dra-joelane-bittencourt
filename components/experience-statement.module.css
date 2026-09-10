@@ -675,3 +675,9 @@
  .evaluationPhoto img { border-radius: 6px 60px 6px 6px; }
  .evaluationPhoto figcaption { font-size: 22px; }
 }
+
+.root:global(.evaluation-chapter) { padding-block: 60px; gap: 22px; }
+:global(.evaluation-chapter) .heading h2 { font-size: clamp(40px,4.8vw,68px); }
+.invitationSeal { display: none; }
+.ctaPrelude { padding-top: 20px; }
+@media(max-width:700px) { .root:global(.evaluation-chapter) { padding-block: 48px; } }

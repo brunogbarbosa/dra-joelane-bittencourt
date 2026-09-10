@@ -3,7 +3,7 @@ export type CasePhoto = {
   zoom?: number; zoomOrigin?: string;
 };
 export type ClinicalCase = {
-  id: string; title: string; mode: 'comparison' | 'reference'; photos: [CasePhoto,CasePhoto];
+  id: string; title: string; patient?: string; mode: 'comparison' | 'reference'; photos: [CasePhoto,CasePhoto];
   complaint: string; observation: string; planning: string; outcome: string;
   editorial: [string,string][];
 };
@@ -25,26 +25,26 @@ export const heroCase: ClinicalCase =
 
 // Roseli aparece somente na abertura; os estudos exploram outros pacientes.
 export const clinicalCases: ClinicalCase[] = [
-  { id: 'cris', title: 'Um olhar após o emagrecimento', mode: 'comparison', ...pending, editorial: [
-    ['A história', 'Cris passou por uma perda importante de peso, conforme o relato da Dra. Joelane.'],
-    ['O olhar', 'Mudanças no rosto após o emagrecimento fazem parte das questões que podem ser acolhidas na avaliação individualizada.'],
-    ['O registro', 'Antes e depois compartilhados pela profissional. O planejamento respeita as características e a história de cada paciente.'],
+  { id: 'cris', patient: 'Cris', title: 'Equilíbrio após o emagrecimento', mode: 'comparison', ...pending, editorial: [
+    ['A história', 'Após uma perda importante de peso, Cris começou a perceber mudanças que também se refletiram no rosto.'],
+    ['O olhar', 'A perda de volume e sustentação pode alterar a percepção dos contornos faciais. Por isso, o rosto foi avaliado como um todo, respeitando suas características e o momento vivido pela paciente.'],
+    ['O resultado', 'Um planejamento pensado para restaurar equilíbrio e sustentação, preservando aquilo que faz parte da sua identidade.'],
   ], photos: [
     { src:'/images/cris-antes.webp', label:'Antes', alt:'Cris: fotografia anterior, fornecida pela Dra. Joelane', width:613, height:1327, position:'center' },
     { src:'/images/cris-depois.webp', label:'Depois', alt:'Cris: fotografia posterior, fornecida pela Dra. Joelane', width:671, height:1327, position:'center' },
   ]},
-  { id: 'caso-2', title: 'Desarmonização', mode: 'comparison', ...pending, editorial: [
-    ['O tema', 'Desarmonização: antes e depois compartilhados pela Dra. Joelane.'],
-    ['Um olhar individual', 'Nem sempre aquilo que o paciente acredita precisar é o que realmente faz sentido para o seu rosto.'],
-    ['A filosofia do cuidado', 'Cada indicação parte de uma avaliação individualizada e de um planejamento pensado para o seu rosto.'],
+  { id: 'caso-2', patient: 'Bruna', title: 'Recomeçar com estratégia', mode: 'comparison', ...pending, editorial: [
+    ['A história', 'A paciente chegou até mim após realizar procedimentos com outro profissional e não se reconhecer no resultado.'],
+    ['O olhar', 'Antes de adicionar qualquer produto, decidimos remover o preenchimento anterior e reavaliar o rosto como um todo.'],
+    ['O resultado', 'Um novo planejamento, buscando devolver harmonia e preservar sua identidade.'],
   ], photos: [
-    { src:'/images/caso-2-a.webp', label:'Antes', alt:'Caso 2, desarmonização: antes, paciente com roupa preta', width:1320, height:1739, position:'50% 38%', zoom:1.9, zoomOrigin:'48% 8%' },
+    { src:'/images/bruna-antes.webp', label:'Antes', alt:'Bruna: antes, fotografia fornecida pela Dra. Joelane', width:1320, height:1246, position:'48% 50%' },
     { src:'/images/caso-2-b.webp', label:'Depois', alt:'Caso 2, desarmonização: depois, paciente com roupa branca', width:1100, height:1429, position:'50% 40%', zoom:1.9, zoomOrigin:'48% 11%' },
   ]},
-  { id: 'caso-3', title: 'Planejamento facial', mode: 'comparison', ...pending, editorial: [
-    ['O registro', 'Antes e depois de um paciente, compartilhados pela Dra. Joelane.'],
-    ['O ponto de partida', 'Cada rosto possui uma estrutura, uma história e necessidades próprias.'],
-    ['A filosofia do cuidado', 'Avaliar e planejar antes de indicar, respeitando a identidade de cada pessoa. O objetivo é valorizar o seu rosto.'],
+  { id: 'caso-3', patient: 'Luciano', title: 'Um novo momento para o rosto', mode: 'comparison', ...pending, editorial: [
+    ['A história', 'Após iniciar seu processo de emagrecimento com Mounjaro, Luciano começou a perceber a perda de sustentação e volume no rosto.'],
+    ['O olhar', 'O planejamento considerou esse novo momento e as necessidades específicas do seu rosto.'],
+    ['O resultado', 'Estímulo de colágeno, reposição de volume em pontos estratégicos e cuidado com a qualidade da pele.'],
   ], photos: [
     { src:'/images/caso-3-a.webp', label:'Antes', alt:'Caso 3: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1125, height:2000, position:'50% 82%', zoom:1.3, zoomOrigin:'50% 85%' },
     { src:'/images/caso-3-b.webp', label:'Depois', alt:'Caso 3: registro após o tratamento, fornecido pela Dra. Joelane', width:1125, height:2000, position:'50% 40%', zoom:1.3, zoomOrigin:'50% 55%' },

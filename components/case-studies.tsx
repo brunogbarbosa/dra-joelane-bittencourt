@@ -22,11 +22,11 @@ export function CaseStudies() {
   return <div className="case-studies">
     <div className="case-navigation" role="group" aria-label="Escolher estudo de caso">{clinicalCases.map((c,i)=><button key={c.id} aria-pressed={active===i} onClick={()=>setActive(i)}>CASO 0{i+1}<ArrowUpRight size={18} strokeWidth={1.5} aria-hidden="true"/></button>)}</div>
     <div className="case-layout" key={current.id}>
-      <div className="case-media"><p className="comparison-title">Caso 0{active+1} · {current.title}</p><CasePhotos record={current}/>
+      <div className="case-media"><p className="comparison-title">Caso 0{active+1} · {current.patient}</p><CasePhotos record={current}/>
         <p className="case-image-note">{current.mode==='reference'?'Registros enviados pela profissional. Sem ordem de antes e depois informada.':current.photos.some(p=>p.presentationMask)?'Fundo do “depois” isolado para apresentação. Fotografias originais disponíveis na ampliação.':'Registros individuais, com diferenças de luz, expressão e enquadramento.'}</p>
       </div>
       <div className="case-copy" aria-live="polite"><p className="chapter-tag">Caso real / 0{active+1}</p>
-        <h3>O rosto como<br/><em>ponto de partida.</em></h3>
+        <h3>{current.title}</h3>
         <dl className="case-details">{details.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
         <p className="pending-caption">Resultados individuais. A indicação depende de avaliação.</p>
         <button ref={opener} className="chapter-link" onClick={()=>setExpanded(true)}>Ver fotografias completas<ArrowUpRight size={20} aria-hidden="true"/></button>
