@@ -7,7 +7,7 @@ export function CasePhotos({ record, priority=false, original=false }: { record:
       <div className="case-photo-frame"><Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height}
         preload={priority&&i===0} loading={priority?'eager':'lazy'}
         sizes={original?'(max-width:700px) 88vw, 42vw':'(max-width:700px) 44vw, (max-width:1000px) 310px, 28vw'}
-        style={{objectPosition:original?'center':photo.position}}/></div>
+        style={{objectPosition:original?'center':photo.position,...(!original&&photo.presentationMask?{maskImage:`url(${photo.presentationMask})`,maskSize:'cover',maskPosition:photo.position,maskRepeat:'no-repeat'}:{})}}/></div>
       <figcaption>{photo.label}</figcaption>
     </figure>)}
   </div>;

@@ -52,14 +52,15 @@ export function CareMethod() {
 export function Testimonials() {
   const [index,setIndex]=useState(0); const voice=patientVoices[index];
   return <section id="depoimentos" className="testimonials-chapter conversion-section" aria-labelledby="testimonials-title">
-    <p className="chapter-tag">06 / Experiências compartilhadas</p><h2 id="testimonials-title" data-reveal>O que minhas<br/><em>pacientes dizem</em></h2>
+    <p className="chapter-tag">06 / Experiências compartilhadas</p><h2 id="testimonials-title" data-reveal>O que meus<br/><em>pacientes dizem</em></h2>
     <div className="voice-stage" aria-live="polite" aria-atomic="true">
       {voice.photo&&<Image className="voice-photo" src={voice.photo} alt={voice.photoAlt||'Retrato autorizado da paciente'} width={96} height={96}/>}
       {voice.pending?<div className="voice-pending"><span className="editorial-index">RELATO 0{index+1} / A INSERIR</span><p className="content-placeholder" data-placeholder>{voice.quote}</p></div>:<blockquote>“{voice.quote}”</blockquote>}
-      {voice.name&&<p>{voice.name}</p>}{voice.objective&&<p>{voice.objective}</p>}
+      {voice.name&&<p className="voice-name">{voice.name}</p>}{voice.objective&&<p>{voice.objective}</p>}
+      {voice.sourceUrl&&<a className="review-source" href={voice.sourceUrl} target="_blank" rel="noopener noreferrer">Ler avaliação no Google<ArrowUpRight size={16} aria-hidden="true"/></a>}
       {voice.resultIndex!==undefined&&<BeforeAfter record={site.results.items[voice.resultIndex]}/>}
     </div>
-    <p className="voice-context">Trechos de relatos compartilhados nos destaques do Instagram. Experiências individuais.</p>
+    <p className="voice-context">Trechos de avaliações públicas no Google. Experiências individuais, sem vínculo presumido com as fotografias dos casos.</p>
     <div className="voice-navigation"><button className="viewer-icon" aria-label="Depoimento anterior" onClick={()=>setIndex((index+patientVoices.length-1)%patientVoices.length)}><ArrowLeft/></button>
       <div role="group" aria-label="Selecionar depoimento">{patientVoices.map((v,i)=><button key={v.id} aria-label={`Depoimento ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>0{i+1}</button>)}</div>
       <button className="viewer-icon" aria-label="Próximo depoimento" onClick={()=>setIndex((index+1)%patientVoices.length)}><ArrowRight/></button>
@@ -84,7 +85,7 @@ export function ContactDetails() {
     <dl className="contact-details">
       <div><dt><MapPin aria-hidden="true"/>Endereço</dt><dd>{contactDetails.building}<br/>{contactDetails.address}</dd></div>
       <div><dt><MessageCircle aria-hidden="true"/>WhatsApp</dt><dd><a href={appointmentUrl} data-cta="contact-whatsapp" target="_blank" rel="noopener noreferrer">{site.phone}<ArrowUpRight size={16} aria-hidden="true"/></a></dd></div>
-      <div><dt><Clock3 aria-hidden="true"/>Horários de atendimento</dt><dd className="content-placeholder" data-placeholder>{contactDetails.hours}</dd></div>
+      <div><dt><Clock3 aria-hidden="true"/>Horários de atendimento</dt><dd>{contactDetails.hours}<br/><span className="saturday-hours">{contactDetails.saturdayHours}</span></dd></div>
       <div><dt><Instagram aria-hidden="true"/>Instagram</dt><dd><a href={site.instagram} target="_blank" rel="noopener noreferrer">{site.instagramHandle}<ArrowUpRight size={16} aria-hidden="true"/></a></dd></div>
       <div><dt><Stethoscope aria-hidden="true"/>Informações profissionais</dt><dd>Dra. {site.name}<br/>Cirurgiã-dentista · {site.cro}<br/>Harmonização Orofacial</dd></div>
     </dl>

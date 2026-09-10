@@ -1,15 +1,22 @@
 // Conteúdo pendente fica explícito. Substituir somente com informações da Dra.
 export type PatientVoice = {
   id: string; quote: string; name?: string; photo?: string; photoAlt?: string;
-  resultIndex?: number; objective?: string; pending: boolean;
+  resultIndex?: number; objective?: string; sourceUrl?: string; pending: boolean;
 };
-export const heroVoice: PatientVoice = { id: 'hero', quote: '[DEPOIMENTO REAL DA PACIENTE]', pending: true };
+export const googleReviewsUrl = 'https://share.google/WqcmKMWTbYfE0un8z';
+export const heroVoice: PatientVoice = { id: 'hero', quote: 'Nota 1000, excelente profissional.', name: 'Diego Matheus Mendes dos Santos', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s109890063617594263457!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false };
 // Transcrições/trechos literais dos prints enviados dos destaques de depoimentos.
 // Sem nomes, fotos ou vínculo com casos: a correspondência ainda não foi informada.
-export const patientVoices: PatientVoice[] = [
+export const instagramVoices: PatientVoice[] = [
   { id: 'relato-1', quote: 'Dra., estou me amando cada vez mais! Estou mais jovem, e a aparência natural é o que mais me deixa realizada. Obrigada por devolver minha autoestima de forma tão delicada.', pending: false },
   { id: 'relato-2', quote: 'Possui uma escuta ativa, cuidadosa e bem estudiosa. Não promete mágica, lhe acolhe. Não tem pressa, é ética no cuidado com o outro no sentido do que é possível ser feito.', pending: false },
   { id: 'relato-3', quote: 'Desde o início, ela foi extremamente atenciosa, paciente e sempre disposta a tirar minhas dúvidas, explicando tudo de forma clara e tranquila, o que me trouxe confiança.', pending: false },
+];
+// Trechos conferidos no Google em 10/09/2026. Não vinculados às fotos dos casos.
+export const patientVoices: PatientVoice[] = [
+  { id: 'google-jonathas', name: 'Jonathas Mota', quote: 'Sou grato pela sua atenção e dedicação.', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s113626764259642265117!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false },
+  { ...heroVoice, id: 'google-diego' },
+  { ...instagramVoices[2], id: 'google-renan', name: 'Renan Nunes', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s102058650109724459172!2s0x7161bb64079fae3:0xff57dc0e6d2d8305' },
 ];
 export const painPoints = [
   'Começou a perceber mudanças no rosto.', 'Sente que parece cansada.',
@@ -38,5 +45,6 @@ export const questions = [
 export const contactDetails = {
   building: 'Edifício Hangar Business Park',
   address: 'Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador',
-  hours: '[HORÁRIO DE ATENDIMENTO]',
+  hours: 'Segunda a sexta, das 9h às 18h.',
+  saturdayHours: 'Sábado, das 9h às 13h, mediante agendamento e conforme a demanda.',
 };

@@ -39,14 +39,14 @@ export function CampaignHero() {
         <p className="campaign-kicker">HARMONIZAÇÃO FACIAL EM SALVADOR</p>
         <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
         <p className="campaign-subtitle">Cada rosto possui uma estrutura, uma história e necessidades próprias. Por isso, antes de qualquer procedimento, meu trabalho começa com avaliação, planejamento e um olhar individualizado para preservar quem você é.</p>
-        <div className="hero-voice">{heroVoice.pending ? <><span className="pending-caption">Relato da paciente · a inserir</span><p className="content-placeholder" data-placeholder>{heroVoice.quote}</p></> : <blockquote>“{heroVoice.quote}”</blockquote>}</div>
+        <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><a className="review-source" href={heroVoice.sourceUrl} target="_blank" rel="noopener noreferrer">{heroVoice.name} · Avaliação no Google</a></div>
         <div className="campaign-action"><AppointmentLink id="hero-whatsapp"/></div>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
       <div className="campaign-portrait"><div className="campaign-silhouette">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
         <CasePhotos record={clinicalCases[0]} priority/>
-        <p className="hero-result-note">Resultados individuais. Cada pessoa tem características próprias.</p>
+        <p className="hero-result-note">Resultados individuais. Fundo do “depois” isolado para apresentação; fotografia original disponível nos casos.</p>
       </div></div>
       <SmileSeal/>
     </div>

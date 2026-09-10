@@ -1,16 +1,33 @@
-# Conteúdo a confirmar com a Dra. Joelane
+# Conteúdo e fontes — Dra. Joelane
 
-## Pendências
+## Atualização de 10/09/2026
 
-- **Três casos (`data/cases.ts`)**: queixa, observação profissional, planejamento e resultado de cada pessoa. São 12 campos clínicos; as fotografias não permitem deduzir essas informações.
-- **Depoimento do hero (`heroVoice` em `data/conversion.ts`)**: relato real da paciente do caso 1. Os três depoimentos gerais já estão preenchidos, mas não foram vinculados a pacientes específicas.
-- **Horários de atendimento**: preencher `contactDetails.hours`. Confirmar torre/bloco, andar e sala do Hangar, se aplicáveis.
-- **Fotos recentes do ensaio**: ainda não recebidas. A foto com cânula saiu da seção de tratamentos. A seção 08 usa composição editorial com monograma, sem repetir retratos; poderá receber uma nova foto do ensaio.
-- **Domínio definitivo**: preencher `site.seo.url` se houver domínio próprio. Na Vercel, os metadados usam o domínio de produção fornecido pelo ambiente.
+- Horários confirmados pelo usuário: segunda a sexta, 9h–18h. Sábado, 9h–13h, mediante agendamento e conforme a demanda.
+- Os dois áudios foram transcritos localmente. Pedem alinhamento do antes/depois, retirada do fundo do depois, bordas retas e ausência de espaço entre as fotos.
+- Todos os pares agora usam molduras retas e imagens unidas. No caso 1, uma máscara SVG de apresentação isola o fundo do depois sem alterar os pixels da fotografia original. O visualizador mantém o arquivo completo, sem máscara. Nenhum retrato gerado foi incorporado.
+- Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O relato do hero é de Diego; não é atribuído à paciente fotografada.
+- As apresentações editoriais dos três casos foram redigidas com os temas confirmados e a filosofia fornecida pela profissional. Não foram inventados procedimentos, doses, queixas ou resultados clínicos.
 
-## Correspondência confirmada dos casos
+## Fontes dos depoimentos
 
-| Caso | Arquivo recebido | Uso no site |
+Perfil fornecido: https://share.google/WqcmKMWTbYfE0un8z
+
+- Jonathas Mota: https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s113626764259642265117!2s0x7161bb64079fae3:0xff57dc0e6d2d8305
+- Diego Matheus Mendes dos Santos: https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s109890063617594263457!2s0x7161bb64079fae3:0xff57dc0e6d2d8305
+- Renan Nunes: https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s102058650109724459172!2s0x7161bb64079fae3:0xff57dc0e6d2d8305
+
+O texto de Renan também consta do print de depoimento anteriormente enviado. As transcrições antigas do Instagram foram preservadas em `instagramVoices` para futura utilização.
+
+## Pendências profissionais
+
+- Caso a Dra. queira a ficha clínica detalhada, confirmar queixa, observação, planejamento e resultado de cada caso. Esses campos continuam preparados em `data/cases.ts`; a página exibe o texto editorial até todos os campos do caso serem preenchidos. Não há placeholders visíveis na página.
+- Fotos recentes do ensaio ainda não recebidas. A foto com cânula foi retirada dos tratamentos; a seção de avaliação usa composição editorial com monograma.
+- Torre/bloco, andar e sala do Hangar, se aplicáveis.
+- Domínio próprio definitivo, se houver, em `site.seo.url`.
+
+## Correspondência confirmada
+
+| Caso | Arquivo recebido | Uso |
 | --- | --- | --- |
 | 1 | caso 1 (2).HEIC | Antes — caso-1-b.webp |
 | 1 | caso 1 (1).HEIC | Depois — caso-1-a.webp |
@@ -19,20 +36,8 @@
 | 3 | caso 3.DNG | Antes — caso-3-a.webp |
 | 3 | caso 3.HEIC | Depois — caso-3-b.webp |
 
-O caso 2 não possui cronologia confirmada e não apresenta rótulos de antes/depois. O caso 1 também aparece no hero, conforme o foco em Full Face solicitado. As fotos foram convertidas para WebP e redimensionadas, sem retoque clínico. O visualizador permite consultar as fotografias completas.
+O caso 2 não possui cronologia confirmada. O caso 1 é também o destaque do hero. Os sete registros antigos permanecem na galeria complementar.
 
-## Conteúdo já incorporado
+## Identificadores de CTA
 
-- Posicionamento, identificação, possibilidades de tratamento, método, apresentação profissional e seção de avaliação enviados pela Dra.
-- Quatro perguntas e respostas fornecidas pela profissional, sem respostas clínicas inventadas.
-- Três depoimentos reais anônimos dos prints (naturalidade, escuta e confiança).
-- Endereço: Edifício Hangar Business Park, Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador.
-- WhatsApp: +55 (71) 99671-4060; Instagram: @drajoelanebittencourt; CRO-BA 20242.
-- Sete registros antigos preservados na galeria complementar, com ampliação e comparação.
-- Favicon e arte Open Graph preservados.
-
-## Identificadores para analytics futuro
-
-`header-whatsapp`, `hero-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`.
-
-Nenhuma ferramenta de analytics foi instalada.
+`header-whatsapp`, `hero-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`. Nenhuma ferramenta de analytics foi instalada.
