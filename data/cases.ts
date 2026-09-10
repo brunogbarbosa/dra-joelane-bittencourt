@@ -1,5 +1,6 @@
 export type CasePhoto = {
   src: string; alt: string; label: string; width: number; height: number; position: string; presentationMask?: string;
+  zoom?: number; zoomOrigin?: string;
 };
 export type ClinicalCase = {
   id: string; title: string; mode: 'comparison' | 'reference'; photos: [CasePhoto,CasePhoto];
@@ -26,8 +27,8 @@ export const clinicalCases: ClinicalCase[] = [
     ['Um olhar individual', 'Nem sempre aquilo que o paciente acredita precisar é o que realmente faz sentido para o seu rosto.'],
     ['A filosofia do cuidado', 'Cada indicação parte de uma avaliação individualizada e de um planejamento pensado para o seu rosto.'],
   ], photos: [
-    { src:'/images/caso-2-a.webp', label:'Registro 01', alt:'Caso 2, desarmonização: registro com roupa preta, sem cronologia informada', width:1320, height:1739, position:'50% 38%' },
-    { src:'/images/caso-2-b.webp', label:'Registro 02', alt:'Caso 2, desarmonização: registro com roupa branca, sem cronologia informada', width:1100, height:1429, position:'50% 40%' },
+    { src:'/images/caso-2-a.webp', label:'Registro 01', alt:'Caso 2, desarmonização: registro com roupa preta, sem cronologia informada', width:1320, height:1739, position:'50% 38%', zoom:2.15, zoomOrigin:'48% 18%' },
+    { src:'/images/caso-2-b.webp', label:'Registro 02', alt:'Caso 2, desarmonização: registro com roupa branca, sem cronologia informada', width:1100, height:1429, position:'50% 40%', zoom:2.15, zoomOrigin:'48% 19%' },
   ]},
   { id: 'caso-3', title: 'Planejamento facial', mode: 'comparison', ...pending, editorial: [
     ['O registro', 'Antes e depois de um paciente, compartilhados pela Dra. Joelane.'],

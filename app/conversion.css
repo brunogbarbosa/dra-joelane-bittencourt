@@ -69,7 +69,7 @@
 .care-manifesto p:first-child { font: italic 32px/1.2 var(--serif); color: var(--rose-deep); }
 .care-body { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; margin-top: 55px; align-items: center; }
 .care-photo { position: relative; aspect-ratio: 4/5; border-radius: 100px 100px 16px 16px; overflow: hidden; }
-.care-photo img { object-fit: cover; object-position: 50% 100%; }
+.care-photo img { object-fit: cover; object-position: 50% 25%; }
 .care-body .ritual-list { margin: 0; }
 .care-body .ritual-list article { padding: 26px 0; }
 .testimonials-chapter { text-align: center; }

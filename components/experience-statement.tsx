@@ -1,8 +1,9 @@
 'use client';
 
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useId, useRef } from 'react';
-import { appointmentUrl } from '@/data/site';
+import { appointmentUrl, site } from '@/data/site';
 import styles from './experience-statement.module.css';
 
 function ImageSeal({ id }: { id: string }) {
@@ -81,6 +82,11 @@ export function ExperienceStatement() {
 
     <div className={styles.invitationSeal} aria-hidden="true"><ImageSeal id={uid}/></div>
 
+    <div className={styles.evaluationBody}>
+    <figure className={styles.evaluationPhoto}>
+      <Image src={site.images.evaluation} alt="Detalhe do trabalho da Dra. Joelane: registros fotográficos no notebook durante o planejamento" width={1800} height={1200} loading="lazy" sizes="(max-width:800px) 88vw, 52vw" />
+      <figcaption>Um olhar atento a cada detalhe.</figcaption>
+    </figure>
     <div className={styles.quote} data-experience-motion="quote">
 
       <div>
@@ -88,6 +94,7 @@ export function ExperienceStatement() {
         <p>Em alguns casos, uma visão mais ampla também pode ser necessária para compreender fatores que influenciam pele, envelhecimento e resposta aos tratamentos.</p>
         <p className={styles.evaluationEmphasis}>Você não sai com uma fórmula pronta. Sai com uma estratégia pensada para você.</p>
       </div>
+    </div>
     </div>
 
     <p className={styles.ctaPrelude}>Seu próximo passo não precisa ser escolher um procedimento. Pode ser simplesmente começar entendendo o que o seu rosto precisa.</p>

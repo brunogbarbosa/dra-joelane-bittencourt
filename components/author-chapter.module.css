@@ -785,7 +785,7 @@
 :global(.doctor-about) .copy h2 { font-size: clamp(45px,4.5vw,78px); line-height: 1.02; }
 :global(.doctor-about) .titleMask>* { white-space: normal; }
 :global(.doctor-about) .subcopy { font-family: var(--sans); font-size: 16px; line-height: 1.8; letter-spacing: 0; }
-:global(.doctor-about) .photo { position: relative; inset: auto; grid-column: 2; grid-row: 1/3; width: 100%; max-width: 520px; height: auto; min-height: 0; aspect-ratio: 1156/1600; align-self: center; justify-self: center; }
+:global(.doctor-about) .photo { position: relative; inset: auto; grid-column: 2; grid-row: 1/3; width: 100%; max-width: 520px; height: auto; min-height: 0; aspect-ratio: 2/3; align-self: center; justify-self: center; }
 :global(.doctor-about) .photo img { object-fit: contain; object-position: center; }
 :global(.doctor-about) .card { position: relative; inset: auto; width: 100%; grid-column: 1; align-self: start; margin: 0; padding: 28px; }
 :global(.doctor-about) .cardCopy { font-size: 16px; line-height: 1.75; }

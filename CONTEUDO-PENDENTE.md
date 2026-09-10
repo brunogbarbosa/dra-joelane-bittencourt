@@ -21,7 +21,8 @@ O texto de Renan também consta do print de depoimento anteriormente enviado. As
 ## Pendências profissionais
 
 - Caso a Dra. queira a ficha clínica detalhada, confirmar queixa, observação, planejamento e resultado de cada caso. Esses campos continuam preparados em `data/cases.ts`; a página exibe o texto editorial até todos os campos do caso serem preenchidos. Não há placeholders visíveis na página.
-- Fotos recentes do ensaio ainda não recebidas. A foto com cânula foi retirada dos tratamentos; a seção de avaliação usa composição editorial com monograma.
+- Ensaio atualizado em 10/09: IMG_0451 na apresentação da Dra., IMG_0446 no método e IMG_3561 na avaliação. Cada foto aparece uma única vez; versões WebP otimizadas, sem alteração de conteúdo.
+- Caso 2: enquadramentos aproximados para destacar os rostos. O visualizador preserva os registros completos e os rótulos sem cronologia presumida.
 - Torre/bloco, andar e sala do Hangar, se aplicáveis.
 - Domínio próprio definitivo, se houver, em `site.seo.url`.
 
