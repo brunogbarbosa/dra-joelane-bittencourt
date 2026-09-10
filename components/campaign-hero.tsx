@@ -46,7 +46,7 @@ export function CampaignHero() {
       <div className="campaign-portrait"><div className="campaign-silhouette">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
         <CasePhotos record={clinicalCases[0]} priority/>
-        <p className="hero-result-note">Resultados individuais. Fundo do “depois” isolado para apresentação; fotografia original disponível nos casos.</p>
+        <p className="hero-result-note">Resultados individuais. Fotografias fornecidas pela profissional.</p>
       </div></div>
       <SmileSeal/>
     </div>

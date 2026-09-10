@@ -2,10 +2,10 @@
 
 ## Atualização de 10/09/2026
 
-- Horários confirmados pelo usuário: segunda a sexta, 9h–18h. Sábado, 9h–13h, mediante agendamento e conforme a demanda.
+- Horários confirmados pelo usuário: segunda a sexta, 9h–18h. Sábado, 9h–13h, mediante agendamento. Qualificação de demanda retirada a pedido do usuário.
 - Os dois áudios foram transcritos localmente. Pedem alinhamento do antes/depois, retirada do fundo do depois, bordas retas e ausência de espaço entre as fotos.
-- Todos os pares agora usam molduras retas e imagens unidas. No caso 1, uma máscara SVG de apresentação isola o fundo do depois sem alterar os pixels da fotografia original. O visualizador mantém o arquivo completo, sem máscara. Nenhum retrato gerado foi incorporado.
-- Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O relato do hero é de Diego; não é atribuído à paciente fotografada.
+- Todos os pares usam molduras retas e imagens unidas. O caso 1 agora utiliza as duas fotos revisadas enviadas pelo usuário, em proporção 4:5, no hero, nos casos e no visualizador. A máscara anterior não é mais aplicada. As versões antigas permanecem nos assets para histórico.
+- Os relatos exibidos são trechos reais de avaliações do Google, identificados por nome público e link de origem. O hero utiliza Roseli Bittencourt, cuja correspondência com a paciente do caso 1 foi confirmada pelo usuário. Fonte: https://share.google/rW4Rqi9Fnfw0owdky
 - As apresentações editoriais dos três casos foram redigidas com os temas confirmados e a filosofia fornecida pela profissional. Não foram inventados procedimentos, doses, queixas ou resultados clínicos.
 
 ## Fontes dos depoimentos

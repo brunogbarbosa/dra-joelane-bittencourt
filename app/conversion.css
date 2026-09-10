@@ -70,6 +70,7 @@
 .care-body { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; margin-top: 55px; align-items: center; }
 .care-photo { position: relative; aspect-ratio: 4/5; border-radius: 100px 100px 16px 16px; overflow: hidden; }
 .care-photo img { object-fit: cover; object-position: 50% 25%; }
+.case-photos.case-photos-caso-1 .case-photo-frame { aspect-ratio: 4/5; }
 .care-body .ritual-list { margin: 0; }
 .care-body .ritual-list article { padding: 26px 0; }
 .testimonials-chapter { text-align: center; }

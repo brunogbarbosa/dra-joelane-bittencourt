@@ -4,7 +4,8 @@ export type PatientVoice = {
   resultIndex?: number; objective?: string; sourceUrl?: string; pending: boolean;
 };
 export const googleReviewsUrl = 'https://share.google/WqcmKMWTbYfE0un8z';
-export const heroVoice: PatientVoice = { id: 'hero', quote: 'Nota 1000, excelente profissional.', name: 'Diego Matheus Mendes dos Santos', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s109890063617594263457!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false };
+// Trecho conferido no Google; vínculo com a paciente do caso 1 confirmado pelo usuário.
+export const heroVoice: PatientVoice = { id: 'hero', quote: 'A minha experiência foi ótima, um atendimento perfeito o local totalmente aconchegante e organizado.', name: 'Roseli Bittencourt', sourceUrl: 'https://share.google/rW4Rqi9Fnfw0owdky', resultIndex: 0, pending: false };
 // Transcrições/trechos literais dos prints enviados dos destaques de depoimentos.
 // Sem nomes, fotos ou vínculo com casos: a correspondência ainda não foi informada.
 export const instagramVoices: PatientVoice[] = [
@@ -15,7 +16,7 @@ export const instagramVoices: PatientVoice[] = [
 // Trechos conferidos no Google em 10/09/2026. Não vinculados às fotos dos casos.
 export const patientVoices: PatientVoice[] = [
   { id: 'google-jonathas', name: 'Jonathas Mota', quote: 'Sou grato pela sua atenção e dedicação.', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s113626764259642265117!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false },
-  { ...heroVoice, id: 'google-diego' },
+  { id: 'google-diego', quote: 'Nota 1000, excelente profissional.', name: 'Diego Matheus Mendes dos Santos', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s109890063617594263457!2s0x7161bb64079fae3:0xff57dc0e6d2d8305', pending: false },
   { ...instagramVoices[2], id: 'google-renan', name: 'Renan Nunes', sourceUrl: 'https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s102058650109724459172!2s0x7161bb64079fae3:0xff57dc0e6d2d8305' },
 ];
 export const painPoints = [
@@ -46,5 +47,5 @@ export const contactDetails = {
   building: 'Edifício Hangar Business Park',
   address: 'Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador',
   hours: 'Segunda a sexta, das 9h às 18h.',
-  saturdayHours: 'Sábado, das 9h às 13h, mediante agendamento e conforme a demanda.',
+  saturdayHours: 'Sábado, das 9h às 13h, mediante agendamento.',
 };

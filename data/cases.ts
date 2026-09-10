@@ -19,8 +19,8 @@ export const clinicalCases: ClinicalCase[] = [
     ['O registro', 'Antes e depois compartilhados pela Dra. Joelane. Cada fotografia faz parte da história dessa paciente.'],
     ['A filosofia do cuidado', 'Entender estrutura, proporções e individualidade antes de indicar. Cada escolha precisa ter um motivo.'],
   ], photos: [
-    { src:'/images/caso-1-b.webp', label:'Antes', alt:'Caso 1: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1125, height:2000, position:'50% 76%' },
-    { src:'/images/caso-1-a.webp', label:'Depois', alt:'Caso 1: registro após o tratamento, fornecido pela Dra. Joelane', width:1125, height:2000, position:'50% 76%', presentationMask:'/images/caso-1-recorte.svg' },
+    { src:'/images/caso-1-antes-revisado.webp', label:'Antes', alt:'Caso 1: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'center' },
+    { src:'/images/caso-1-depois-revisado.webp', label:'Depois', alt:'Caso 1: registro após o tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'center' },
   ]},
   { id: 'caso-2', title: 'Desarmonização', mode: 'reference', ...pending, editorial: [
     ['O tema', 'Desarmonização: registros selecionados pela Dra. Joelane para apresentar esse tema.'],
