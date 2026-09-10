@@ -1,10 +1,10 @@
 'use client';
 
-import { BeforeAfter } from './before-after';
+import { CasePhotos } from './case-photos';
+import { clinicalCases } from '@/data/cases';
 import { AppointmentLink } from './appointment-link';
 import { heroVoice } from '@/data/conversion';
 import { useId } from 'react';
-import { site } from '@/data/site';
 import { useCampaignMotion } from './use-campaign-motion';
 
 
@@ -36,15 +36,16 @@ export function CampaignHero() {
     <div className="campaign-contour" aria-hidden="true"/>
     <div className="campaign-inner">
       <div className="campaign-copy">
-        <p className="campaign-kicker">HARMONIZAÇÃO OROFACIAL</p>
-        <h1 id="campaign-title"><span className="campaign-title-line"><span>Harmonização facial com <em>naturalidade,</em></span></span><span className="campaign-title-line"><span>estratégia e respeito à individualidade de cada rosto.</span></span></h1>
-        <p className="campaign-subtitle">Cada tratamento começa com uma avaliação individualizada, respeitando seus traços, suas necessidades e aquilo que realmente faz sentido para você.</p>
+        <p className="campaign-kicker">HARMONIZAÇÃO FACIAL EM SALVADOR</p>
+        <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
+        <p className="campaign-subtitle">Cada rosto possui uma estrutura, uma história e necessidades próprias. Por isso, antes de qualquer procedimento, meu trabalho começa com avaliação, planejamento e um olhar individualizado para preservar quem você é.</p>
         <div className="hero-voice">{heroVoice.pending ? <><span className="pending-caption">Relato da paciente · a inserir</span><p className="content-placeholder" data-placeholder>{heroVoice.quote}</p></> : <blockquote>“{heroVoice.quote}”</blockquote>}</div>
         <div className="campaign-action"><AppointmentLink id="hero-whatsapp"/></div>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
       <div className="campaign-portrait"><div className="campaign-silhouette">
-        <BeforeAfter record={site.results.items[0]} priority title="Um registro real. Uma história única."/>
+        <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
+        <CasePhotos record={clinicalCases[0]} priority/>
         <p className="hero-result-note">Resultados individuais. Cada pessoa tem características próprias.</p>
       </div></div>
       <SmileSeal/>

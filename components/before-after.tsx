@@ -25,11 +25,11 @@ export function BeforeAfter({ record, beforeImage, afterImage, beforeAlt, afterA
           right: 'auto', bottom: 'auto', maxWidth: 'none', objectFit: 'fill',
         } : { position: 'absolute', width: '100%', height: '100%', objectFit: 'contain' };
         const src = record?.image || (i === 0 ? beforeImage : afterImage);
-        return <div className="before-after-half" key={half} style={{ flexGrow: ratio }}>
+        return <div className="before-after-half" key={half} style={{ flexGrow: ratio / (record?.comparisonRatio || 1) }}>
           <div className="before-after-crop" style={{ aspectRatio: ratio }}>
             {src && <Image src={src} alt={(i === 0 ? beforeAlt : afterAlt) || `${i === 0 ? 'Antes' : 'Depois'} — ${record?.alt || title || 'registro real'}`} width={1284} height={record ? Math.round(1284 / (vertical ? record.comparisonRatio * record.beforeShare : record.comparisonRatio / record.beforeShare)) : 1284}
               preload={priority && i === 0} loading={priority ? 'eager' : 'lazy'}
-              sizes={vertical ? '(max-width: 700px) 88vw, 26vw' : '(max-width: 700px) 44vw, (max-width: 1100px) 24vw, 26vw'} style={crop} />}
+              sizes="(max-width: 700px) 88vw, (max-width: 1000px) 620px, (max-width: 1600px) 50vw, 720px" style={crop} />}
           </div>
           <span className="before-after-label">{i === 0 ? 'Antes' : 'Depois'}</span>
         </div>;

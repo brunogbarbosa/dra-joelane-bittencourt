@@ -4,7 +4,7 @@ export const site = {
   name: 'Joelane Bittencourt', monogram: 'JB',
   headline: 'Harmonização orofacial. Rejuvenescimento facial com naturalidade.',
   cro: 'CRO-BA 20242',
-  bio: 'Sou a Dra. Joelane Bittencourt, cirurgiã-dentista e especialista em Harmonização Orofacial. Em Salvador, meu olhar se volta para o rejuvenescimento facial com naturalidade, respeitando os traços e a identidade de cada pessoa.',
+  bio: 'Meu trabalho parte de uma ideia simples: nenhum rosto deveria receber o mesmo tratamento apenas porque existe uma tendência ou um procedimento disponível. Acredito em resultados construídos com critério, planejamento e respeito à identidade de cada paciente. Por isso, antes de indicar qualquer tratamento, procuro entender o rosto como um todo e aquilo que realmente faz sentido para cada pessoa.',
   education: [] as string[], specialties: ['Harmonização Orofacial'],
   phone: '+55 (71) 99671-4060', whatsapp: '5571996714060', whatsappUrl: '', address: 'Salvador · Bahia', professionalPhilosophy: '',
   instagram: 'https://www.instagram.com/drajoelanebittencourt/', instagramHandle: '@drajoelanebittencourt',
@@ -21,6 +21,6 @@ export const site = {
     { image: '/images/resultado-06.webp', label: 'Expressão e naturalidade', alt: 'Registro 06 de antes e depois fornecido pela Dra. Joelane Bittencourt: expressão e naturalidade', orientation: 'horizontal', beforeShare: 0.5079365079365079, comparisonRatio: 0.4150453955901427 },
     { image: '/images/resultado-07.webp', label: 'Um olhar renovado', alt: 'Registro 07 de antes e depois fornecido pela Dra. Joelane Bittencourt: um olhar renovado', orientation: 'horizontal', beforeShare: 0.4944, comparisonRatio: 0.38625 },
   ] },
-  seo: { title: 'Dra. Joelane Bittencourt | Harmonização Orofacial em Salvador', description: 'Harmonização facial com naturalidade, estratégia e respeito à individualidade de cada rosto. Agende sua avaliação com a Dra. Joelane Bittencourt.', url: '' },
+  seo: { title: 'Dra. Joelane Bittencourt | Harmonização Facial em Salvador', description: 'Harmonização Orofacial e rejuvenescimento facial em Salvador com a Dra. Joelane Bittencourt. Avaliação individualizada e planejamento para o seu rosto.', url: '' },
 };
 export const appointmentUrl = site.whatsappUrl || (site.whatsapp ? `https://wa.me/${site.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent('Olá, Dra. Joelane! Conheci seu trabalho pelo site e gostaria de agendar uma avaliação.')}` : site.instagram);

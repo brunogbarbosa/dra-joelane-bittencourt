@@ -1,12 +1,12 @@
 /* Evolution of the existing editorial system: same fonts, palette and motion. */
-.conversion-section { padding: clamp(64px,8vw,130px) max(6%,calc((100% - 1600px)/2)); }
+.conversion-section { padding: clamp(64px,7vw,112px) max(6%,calc((100% - 1440px)/2)); }
 .conversion-section h2 { font-size: clamp(44px,5.4vw,88px); line-height: 1.05; }
 .conversion-section .chapter-tag { margin-bottom: 28px; }
 .conversion-cta { font-size: 12px; letter-spacing: .08em; gap: 24px; line-height: 1.6; text-align: left; }
 .content-placeholder { font-family: var(--sans); font-size: 14px; letter-spacing: .025em; line-height: 1.8; overflow-wrap: anywhere; }
 .pending-caption { display: block; font-size: 12px; line-height: 1.7; letter-spacing: .03em; }
 .editorial-index { font-size: 12px; letter-spacing: .12em; color: var(--rose-deep); }
-.conversion-hero.campaign { height: auto; min-height: 0; max-height: none; padding: 140px 6.3% 74px; }
+.conversion-hero.campaign { height: auto; min-height: 0; max-height: none; padding: 140px max(6.3%,calc((100% - 1440px)/2)) 74px; }
 .conversion-hero .campaign-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 7%; height: auto; min-height: 0; padding: 0; align-items: center; }
 .conversion-hero .campaign-copy { padding: 0; width: auto; }
 .conversion-hero h1 { font-size: clamp(40px,3.7vw,65px); line-height: 1.06; letter-spacing: -.04em; }
@@ -20,11 +20,13 @@
 .hero-voice .content-placeholder { font-size: 13px; color: #736758; }
 .hero-credentials { font-size: 12px; margin-top: 24px; letter-spacing: .08em; color: var(--rose-deep); }
 .hero-result-note { font-size: 12px; line-height: 1.6; margin-top: 16px; }
-.before-after { min-width: 0; }
+.before-after { min-width: 0; width: 100%; }
 .comparison-title { font: italic 22px/1.4 var(--serif); margin-bottom: 18px; }
 .before-after-pair { display: flex; gap: 10px; align-items: flex-start; }
+.before-after-stacked { flex-direction: column; gap: 20px; }
+.before-after-stacked .before-after-half { width: 100%; flex: none; }
 .before-after-half { flex: 1 1 0; min-width: 0; }
-.before-after-crop { position: relative; overflow: hidden; background: #deceb6; border-radius: 80px 80px 8px 8px; }
+.before-after-crop { position: relative; overflow: hidden; background: #deceb6; border-radius: 16px; }
 .before-after-label { display: block; padding-top: 12px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
 .pain-chapter { background: #f1ebe0; }
 .pain-list { list-style: none; padding: 0; margin: 60px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 8%; }
@@ -32,22 +34,23 @@
 .pain-list p { font: 30px/1.3 var(--serif); }
 .pain-list .pain-highlight { padding: 35px 0; }
 .pain-highlight p { font-size: 38px; color: var(--rose-deep); font-style: italic; }
-.treatments-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; }
+.treatments-chapter { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(32px,5vw,80px); align-items: start; }
 .treatments-intro>p:not(.chapter-tag) { margin-top: 22px; max-width: 500px; }
-.treatments-photo { position: relative; height: 340px; margin-top: 36px; border-radius: 150px 150px 14px 14px; overflow: hidden; }
-.treatments-photo img { object-fit: cover; object-position: 50% 32%; }
+.treatments-photo { position: relative; aspect-ratio: 1168/1600; width: min(100%,460px); margin: 36px auto 0; border-radius: 120px 120px 16px 16px; overflow: hidden; }
+.treatments-photo img { object-fit: contain; object-position: center; }
 .treatments-options { padding-top: 56px; }
 .treatments-options ol { list-style: none; margin: 0; padding: 0; }
 .treatments-options li { display: flex; align-items: baseline; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); transition: padding .4s,color .4s; }
 .treatments-options li:hover { padding-left: 10px; color: var(--rose-deep); }
 .treatments-options h3 { font-size: clamp(25px,2.6vw,39px); line-height: 1.12; }
-.gallery-chapter { padding-block: 90px; }
+.gallery-chapter { padding: 90px max(6%,calc((100% - 1440px)/2)); }
 .gallery-heading h2 em,.case-copy em { color: var(--rose-light); }
 .case-navigation { display: flex; gap: 35px; border-bottom: 1px solid #deceb640; margin-bottom: 36px; }
 .case-navigation button { font-size: 13px; letter-spacing: .12em; min-height: 55px; border-bottom: 2px solid transparent; display: flex; gap: 30px; align-items: center; }
 .case-navigation button[aria-pressed=true] { border-color: var(--rose-light); color: var(--rose-light); }
-.case-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 9%; align-items: center; animation: case-arrive .6s ease both; }
-.case-layout .before-after { max-width: 600px; }
+.case-layout { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: clamp(32px,4vw,64px); align-items: center; max-width: 1320px; margin-inline: auto; animation: case-arrive .6s ease both; }
+.case-layout .before-after { max-width: none; }
+.case-copy { min-width: 0; }
 .case-copy h3 { font-size: clamp(42px,4vw,64px); margin-top: 24px; }
 .case-details { margin: 35px 0 18px; }
 .case-details>div { padding: 18px 0; border-top: 1px solid #deceb640; }
@@ -56,7 +59,7 @@
 .case-copy .chapter-link { margin-top: 26px; }
 .case-copy .pending-caption { color: var(--rose-light); }
 .complementary-title { font-size: 35px; margin: 70px 0 30px; }
-.gallery-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .gallery-item:nth-child(even) { padding-top: 0; }
 .gallery-end .conversion-cta { background: var(--rose-light); color: var(--wine); margin: 0; }
 .gallery-end .conversion-cta:hover { color: var(--ivory); }
@@ -65,12 +68,12 @@
 .care-manifesto p+p { margin-top: 18px; }
 .care-manifesto p:first-child { font: italic 32px/1.2 var(--serif); color: var(--rose-deep); }
 .care-body { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; margin-top: 55px; align-items: center; }
-.care-photo { position: relative; height: 590px; border-radius: 200px 200px 16px 16px; overflow: hidden; }
-.care-photo img { object-fit: cover; object-position: 50% 82%; }
+.care-photo { position: relative; aspect-ratio: 4/5; border-radius: 100px 100px 16px 16px; overflow: hidden; }
+.care-photo img { object-fit: cover; object-position: 50% 100%; }
 .care-body .ritual-list { margin: 0; }
 .care-body .ritual-list article { padding: 26px 0; }
 .testimonials-chapter { text-align: center; }
-.voice-stage { max-width: 940px; margin: 45px auto 0; border-block: 1px solid var(--line); padding: 48px 0; }
+.voice-stage { max-width: 940px; min-height: 360px; display: flex; flex-direction: column; justify-content: center; margin: 45px auto 0; border-block: 1px solid var(--line); padding: 48px 0; }
 .voice-stage blockquote { font: italic 38px/1.4 var(--serif); }
 .voice-context { max-width: 650px; margin: 20px auto 0; font-size: 12px; line-height: 1.7; color: var(--rose-deep); }
 .voice-pending p { margin-top: 25px; font-size: clamp(16px,2vw,24px); }
@@ -106,7 +109,7 @@
 .contact-details a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 .contact-details .content-placeholder { display: block; }
 .conversion-footer .footer-bottom { flex-wrap: wrap; }
-.conversion-footer .footer-bottom a { display: inline-flex; align-items: center; }
+.conversion-footer .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; }
 @keyframes case-arrive { from { opacity: .4; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @media(max-width:1200px) {
  .desktop-nav,.header .header-cta { display: none; }.mobile-menu { display: grid; }
@@ -115,7 +118,7 @@
  .conversion-hero h1 { font-size: clamp(38px,4.2vw,52px); }
  .conversion-hero .campaign-seal { display: none; }
  .treatments-chapter,.care-heading,.care-body,.faq-chapter { gap: 6%; }
- .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
  .contact-details { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media(max-width:700px) {
@@ -130,9 +133,9 @@
  .conversion-cta { padding: 16px 19px; gap: 15px; font-size: 11px; letter-spacing: .055em; min-height: 58px; }
  .conversion-hero .campaign-cta { font-size: 11px; }
  .conversion-hero .campaign-portrait { width: 100%; }
- .before-after-crop { border-radius: 50px 50px 6px 6px; }
+ .before-after-crop { border-radius: 12px; }
  .before-after-stacked { flex-direction: column; gap: 22px; }
- .before-after-stacked .before-after-half { width: 100%; }
+ .before-after-stacked .before-after-half { width: 100%; flex: none; }
  .before-after-stacked .before-after-crop { border-radius: 12px; }
  .comparison-title { font-size: 21px; }
  .pain-list { grid-template-columns: 1fr; margin-top: 35px; }
@@ -140,7 +143,7 @@
  .pain-highlight p { font-size: 34px; }
  .pain-list li { padding: 24px 0; gap: 18px; }
  .treatments-chapter,.care-heading,.care-body,.faq-chapter { display: block; }
- .treatments-photo { height: 310px; }
+ .treatments-photo { width: min(100%,390px); border-radius: 85px 85px 14px 14px; }
  .treatments-options { padding-top: 22px; }
  .treatments-options h3 { font-size: 28px; }
  .treatments-options li { padding: 22px 0; gap: 18px; }
@@ -153,19 +156,19 @@
  .case-copy h3 { font-size: 44px; }
  .case-details { margin-top: 25px; }
  .complementary-title { font-size: 30px; margin-top: 50px; }
- .gallery-grid { gap: 28px 14px; }
+ .gallery-grid { grid-template-columns: 1fr; gap: 32px; max-width: 430px; margin-inline: auto; }
  .gallery-item figcaption>span:first-child { font-size: 14px; }
  .gallery-item figcaption>span:last-child { font-size: 10px; }
- .gallery-open { width: 32px; height: 32px; }
+ .gallery-open { width: 44px; height: 44px; }
  .gallery-end p { font-size: 13px; }
  .care-manifesto { margin-top: 30px; }
  .care-body { margin-top: 35px; }
- .care-photo { height: 115vw; max-height: 550px; margin-bottom: 30px; }
+ .care-photo { width: min(100%,430px); margin: 0 auto 30px; border-radius: 70px 70px 14px 14px; }
  .care-manifesto p:first-child { font-size: 28px; }
  .care-body .ritual-list h3 { font-size: 35px; }
- .voice-stage { padding: 35px 0; }
+ .voice-stage { min-height: 430px; padding: 30px 0; }
  .voice-navigation { gap: 18px; }.voice-navigation>div { gap: 5px; }
- .voice-stage blockquote { font-size: 29px; }
+ .voice-stage blockquote { font-size: clamp(25px,6.8vw,29px); line-height: 1.45; }
  .faq-list { margin-top: 30px; }
  .contact-heading { display: block; }.contact-heading .conversion-cta { margin-top: 30px; }
  .contact-details { grid-template-columns: 1fr; margin-top: 38px; gap: 28px; }
@@ -174,3 +177,54 @@
  .header { gap: 10px; }.menu-dialog { overflow-y: auto; max-height: 100dvh; }.menu-dialog nav a { font-size: 29px; }
 }
 @media(prefers-reduced-motion:reduce) { .case-layout { animation: none; }.faq-answer,.faq-item svg { transition: none; } }
+
+@media(min-width:701px) and (max-width:1000px) {
+ .case-layout { grid-template-columns: 1fr; max-width: 620px; gap: 38px; }
+ .case-copy { max-width: none; }
+ .treatments-options { padding-top: 0; }
+ .treatments-options h3 { font-size: 28px; }
+}
+
+/* Full Face cases: large, aligned portraits; original files remain available. */
+.case-media { min-width: 0; width: 100%; }
+.case-photos { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; width: 100%; }
+.case-photos figure { min-width: 0; margin: 0; }
+.case-photo-frame { position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 16px; background: #deceb61a; }
+.case-photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.case-photos figcaption { padding-top: 13px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.case-image-note { font-size: 12px; line-height: 1.7; margin-top: 18px; opacity: .8; }
+.case-dialog { max-height: 94dvh; overflow-y: auto; }
+.case-photos-original { max-width: 1100px; margin: 20px auto; align-items: start; }
+.case-photos-original .case-photo-frame { aspect-ratio: auto; border-radius: 8px; }
+.case-photos-original img { height: auto; object-fit: contain; }
+.conversion-hero .case-photo-frame { aspect-ratio: 3/4; border-radius: 100px 100px 12px 12px; }
+.conversion-hero .case-photo-frame img { object-fit: cover; }
+.gallery-photo { background: transparent; border-radius: 14px; }
+.gallery-photo img { object-fit: contain; }
+.gallery-grid { align-items: start; }
+.pain-reassurance { max-width: 760px; margin: 45px 0 0 auto; padding-top: 30px; border-top: 1px solid var(--line); font: 34px/1.3 var(--serif); }
+.pain-reassurance em { color: var(--rose-deep); }
+.treatments-options li p { font-size: 16px; line-height: 1.75; margin-top: 13px; max-width: 510px; }
+.treatments-context { color: var(--rose-deep); }
+.treatment-signature { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 48px; font-size: 10px; letter-spacing: .1em; color: var(--rose-deep); }
+.treatment-signature span { font: 72px/1 var(--serif); letter-spacing: -.12em; }
+.treatment-signature i { height: 1px; width: 50px; background: var(--rose); }
+.care-body .ritual-list h3 { font-size: clamp(25px,2.4vw,36px); line-height: 1.15; }
+.care-body .ritual-list p { line-height: 1.75; }
+.faq-answer p { line-height: 1.8; }
+.conversion-cta, .conversion-hero .campaign-cta { min-height: 70px; padding: 21px 28px; font-size: 14px; letter-spacing: .06em; }
+.conversion-cta span { min-width: 0; }
+.conversion-cta svg { flex-shrink: 0; }
+@media(max-width:700px) {
+ .case-photos { gap: 10px; }
+ .case-photo-frame { border-radius: 12px; }
+ .case-photos figcaption { font-size: 11px; letter-spacing: .12em; }
+ .conversion-hero .case-photo-frame { border-radius: 65px 65px 10px 10px; aspect-ratio: 3/4; }
+ .case-photos-original { grid-template-columns: 1fr; }
+ .pain-reassurance { font-size: 30px; margin-top: 28px; }
+ .treatment-signature { gap: 14px; margin-top: 30px; }
+ .treatment-signature i { width: 24px; }
+ .care-body .ritual-list h3 { font-size: 28px; }
+ .conversion-cta, .conversion-hero .campaign-cta { width: 100%; min-height: 70px; padding: 19px 22px; font-size: 13px; gap: 15px; letter-spacing: .04em; }
+ .case-copy .chapter-link { max-width: 100%; gap: 12px; }
+}

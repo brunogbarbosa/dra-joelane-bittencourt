@@ -11,29 +11,30 @@ export const patientVoices: PatientVoice[] = [
   { id: 'relato-2', quote: 'Possui uma escuta ativa, cuidadosa e bem estudiosa. Não promete mágica, lhe acolhe. Não tem pressa, é ética no cuidado com o outro no sentido do que é possível ser feito.', pending: false },
   { id: 'relato-3', quote: 'Desde o início, ela foi extremamente atenciosa, paciente e sempre disposta a tirar minhas dúvidas, explicando tudo de forma clara e tranquila, o que me trouxe confiança.', pending: false },
 ];
-export const caseStudies = [0, 1, 2].map(resultIndex => ({
-  resultIndex, complaint: '[INSERIR QUEIXA]', approach: '[INSERIR CONDUTA]', result: '[INSERIR RESULTADO]',
-}));
 export const painPoints = [
-  'Meu rosto parece cansado.', 'Comecei a perceber mais a flacidez.',
-  'Não gosto do meu perfil.', 'Sinto que meu rosto perdeu definição.',
-  'Quero melhorar, mas tenho medo de ficar artificial.', 'Quero me cuidar, mas não sei por onde começar.',
+  'Começou a perceber mudanças no rosto.', 'Sente que parece cansada.',
+  'Perdeu volume após emagrecer.', 'Quer melhorar algo, mas tem medo de ficar artificial.',
+  'Já fez procedimentos e não se reconheceu.',
 ];
 export const treatments = [
-  'Preenchimento facial', 'Bioestimuladores', 'Contorno e definição facial', 'Tratamentos para flacidez',
-  'Lábios', 'Queixo e mandíbula', 'Rejuvenescimento facial', 'Outros tratamentos indicados após avaliação',
+  ['Para restaurar', 'Volumes e estruturas que foram perdidos com o tempo.'],
+  ['Para prevenir', 'Estratégias para acompanhar o processo de envelhecimento de forma inteligente.'],
+  ['Para redefinir', 'Contornos e proporções faciais quando existe indicação.'],
+  ['Para melhorar a qualidade da pele', 'Tratamentos pensados para textura, viço e saúde da pele.'],
+  ['Para valorizar', 'Lábios, perfil e outros pontos que podem ser aprimorados sem perder sua identidade.'],
 ];
 export const careSteps = [
-  ['Escuta', 'Um momento para compartilhar o que você procura. Para conversar, perguntar e se sentir à vontade.'],
-  ['Planejamento', 'Suas necessidades orientam as escolhas. Cada etapa é conversada, cada detalhe tem um propósito.'],
-  ['Cuidado', 'Atenção ao seu conforto e à sua individualidade, do começo ao fim.'],
-  ['Acompanhamento', 'O encontro termina. O cuidado continua, com orientações e espaço para suas dúvidas.'],
+  ['Entender antes de indicar', 'Nem sempre aquilo que o paciente acredita precisar é o que realmente faz sentido para o seu rosto.'],
+  ['Planejar antes de transformar', 'Cada escolha precisa ter um motivo. Nada deve ser feito apenas porque está em tendência.'],
+  ['Tratar sem descaracterizar', 'Meu objetivo não é criar um novo rosto. É valorizar o seu.'],
+  ['Cuidar além do procedimento', 'Dependendo da necessidade, o planejamento pode envolver uma visão mais ampla do paciente e do processo de envelhecimento.'],
 ];
 export const questions = [
-  'Tenho medo de ficar artificial. E se isso acontecer?',
-  'Como sei qual procedimento é indicado para mim?', 'Preciso fazer vários procedimentos?',
-  'Como funciona a avaliação?', 'Quanto tempo dura o resultado?',
-].map((question, i) => ({ id: `duvida-${i+1}`, question, answer: '[RESPOSTA DA PROFISSIONAL]' }));
+  { question: 'Tenho medo de ficar artificial. Como você trabalha?', answer: 'Naturalidade não significa não perceber resultado. Significa buscar equilíbrio, respeitando seus traços e evitando excessos.' },
+  { question: 'Como sei o que preciso fazer?', answer: 'Você não precisa chegar sabendo qual procedimento deseja. A avaliação existe justamente para entender suas queixas e definir o que realmente faz sentido para você.' },
+  { question: 'Preciso fazer tudo de uma vez?', answer: 'Não. Um planejamento pode ser construído por etapas, respeitando suas necessidades, prioridades e o momento de cada paciente.' },
+  { question: 'Como funciona a avaliação?', answer: 'Na avaliação, conversamos sobre suas queixas, expectativas e histórico. Analiso o rosto, suas proporções e aquilo que pode fazer sentido dentro de um planejamento individualizado.' },
+].map((q,i) => ({ id: `duvida-${i+1}`, ...q }));
 export const contactDetails = {
   building: 'Edifício Hangar Business Park',
   address: 'Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador',

@@ -80,7 +80,7 @@ export function AuthorChapter() {
           <span className={styles.titleMask}><span data-author-motion="title">Bittencourt</span></span>
 
         </h2>
-        <p className={styles.subcopy} data-author-motion="subcopy">Cirurgiã-dentista | Harmonização Orofacial<br/>{site.cro}</p>
+        <p className={styles.subcopy} data-author-motion="subcopy">Cirurgiã-dentista e especialista em Harmonização Orofacial.<br/>{site.cro}<br/>Atendimento em Salvador — Bahia</p>
       </div>
 
       <figure className={styles.photo} data-author-motion="photo">
@@ -88,7 +88,7 @@ export function AuthorChapter() {
           src={site.images.hero}
           alt="Retrato profissional da Dra. Joelane Bittencourt"
           fill
-          sizes="(max-width: 700px) 51vw, (max-width: 1100px) 56vw, 54vw"
+          sizes="(max-width: 700px) 88vw, (max-width: 1600px) 46vw, 680px"
         />
       </figure>
 

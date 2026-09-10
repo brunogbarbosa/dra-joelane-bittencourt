@@ -624,3 +624,42 @@
  :global(.evaluation-chapter) .photo { height: 120vw; max-height: 650px; min-height: 0; }
  :global(.evaluation-chapter) .cta { font-size: 11px; padding: 18px; }
 }
+
+/* A signature invitation, with no repeated portrait. */
+.root:global(.evaluation-chapter) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 720px;
+  padding: 100px max(6%,calc((100% - 1200px)/2));
+  text-align: center;
+}
+:global(.evaluation-chapter) .topline { justify-content: center; width: auto; }
+:global(.evaluation-chapter) .topline span { display: none; }
+:global(.evaluation-chapter) .heading { max-width: 1050px; }
+:global(.evaluation-chapter) .heading h2 { font-size: clamp(48px,6.2vw,94px); line-height: 1.07; }
+:global(.evaluation-chapter) .titleMask { overflow: visible; padding: 0; margin: 0; }
+:global(.evaluation-chapter) .subtitle { margin-top: 26px; }
+:global(.evaluation-chapter) .quote { max-width: 650px; }
+:global(.evaluation-chapter) .cta { width: fit-content; align-self: center; min-width: 0; max-width: 100%; }
+:global(.evaluation-chapter) .thread { opacity: .24; width: 100%; height: 100%; inset: 0; }
+.invitationSeal { position: relative; width: 84px; height: 84px; order: -1; color: var(--rose-deep); }
+.invitationSeal .seal { position: static; width: 100%; height: 100%; transform: none; color: var(--rose-deep); }
+@media(max-width:700px) {
+ .root:global(.evaluation-chapter) { min-height: 0; padding: 64px 6%; gap: 26px; }
+ :global(.evaluation-chapter) .heading h2 { font-size: clamp(43px,12vw,66px); }
+ :global(.evaluation-chapter) .subtitle { margin-top: 20px; font-size: 10px; letter-spacing: .1em; }
+ :global(.evaluation-chapter) .quote p { font-size: 16px; line-height: 1.75; }
+ .invitationSeal { width: 72px; height: 72px; }
+}
+
+:global(.evaluation-chapter) .quote .evaluationEmphasis { font: italic 32px/1.3 var(--serif); color: var(--rose-deep); margin-top: 30px; }
+.ctaPrelude { max-width: 680px; padding-top: 28px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.8; }
+:global(.evaluation-chapter) .subtitle { white-space: normal; }
+:global(.evaluation-chapter) .cta { min-height: 76px; padding: 22px 32px; font-size: 14px; letter-spacing: .06em; }
+@media(max-width:700px) {
+ :global(.evaluation-chapter) .cta { width: 100%; padding: 20px 22px; min-height: 76px; font-size: 13px; letter-spacing: .04em; gap: 14px; }
+ :global(.evaluation-chapter) .quote .evaluationEmphasis { font-size: 28px; }
+}

@@ -1,9 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { useEffect, useId, useRef } from 'react';
-import { appointmentUrl, site } from '@/data/site';
+import { appointmentUrl } from '@/data/site';
 import styles from './experience-statement.module.css';
 
 function ImageSeal({ id }: { id: string }) {
@@ -62,7 +61,7 @@ export function ExperienceStatement() {
     };
   }, []);
 
-  return <section ref={root} className={`${styles.root} evaluation-chapter`} aria-labelledby="experience-statement-title">
+  return <section ref={root} id="avaliacao" className={`${styles.root} evaluation-chapter`} aria-labelledby="experience-statement-title">
     <svg className={styles.thread} viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <path d="M 552 934 C 557 687 678 552 836 475 C 1116 338 1287 119 1648 -18" pathLength="1" vectorEffect="non-scaling-stroke" data-experience-motion="line" />
     </svg>
@@ -73,35 +72,25 @@ export function ExperienceStatement() {
     </header>
 
     <div className={styles.heading}>
-      <h2 id="experience-statement-title" aria-label="Seu rosto não precisa de uma fórmula pronta.">
-        <span className={styles.titleMask}><span data-experience-motion="title">Seu rosto não precisa</span></span>
-        <span className={styles.titleMask}><em data-experience-motion="title">de uma fórmula pronta.</em></span>
+      <h2 id="experience-statement-title" aria-label="Tudo começa pela avaliação.">
+        <span className={styles.titleMask}><span data-experience-motion="title">Tudo começa</span></span>
+        <span className={styles.titleMask}><em data-experience-motion="title">pela avaliação.</em></span>
       </h2>
-      <p className={styles.subtitle} data-experience-motion="fade">BELEZA COM IDENTIDADE. SEMPRE.</p>
+      <p className={styles.subtitle} data-experience-motion="fade">ANTES DE PENSAR EM PROCEDIMENTOS, É PRECISO ENTENDER VOCÊ.</p>
     </div>
 
-    <figure className={styles.photo} data-experience-motion="photo">
-      <Image
-        src={site.images.beauty}
-        alt="Dra. Joelane Bittencourt no consultório, com instrumento de harmonização facial"
-        fill
-        sizes="(max-width: 700px) 94vw, (max-width: 1100px) 50vw, 45vw"
-      />
-      <span className={styles.photoWash} aria-hidden="true" />
-      <svg className={styles.photoArc} viewBox="0 0 720 740" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d="M 735 -18 C 526 49 414 177 371 359 C 345 470 349 594 371 758" pathLength="1" vectorEffect="non-scaling-stroke" data-experience-motion="line" />
-      </svg>
-      <p className={styles.photoCopy} data-experience-motion="photo-copy">BELEZA<br />QUE PRESERVA<br />QUEM VOCÊ É.<span aria-hidden="true" /></p>
-      <ImageSeal id={uid} />
-    </figure>
+    <div className={styles.invitationSeal} aria-hidden="true"><ImageSeal id={uid}/></div>
 
     <div className={styles.quote} data-experience-motion="quote">
 
       <div>
-        <p>Precisa de um olhar atento, uma avaliação individualizada e um planejamento pensado para você.</p>
-        <p>Agende sua avaliação e descubra o que realmente faz sentido para o seu rosto.</p>
+        <p>Na avaliação, conversamos sobre suas queixas, expectativas e histórico. Analiso o rosto, suas proporções e aquilo que pode fazer sentido dentro de um planejamento individualizado.</p>
+        <p>Em alguns casos, uma visão mais ampla também pode ser necessária para compreender fatores que influenciam pele, envelhecimento e resposta aos tratamentos.</p>
+        <p className={styles.evaluationEmphasis}>Você não sai com uma fórmula pronta. Sai com uma estratégia pensada para você.</p>
       </div>
     </div>
+
+    <p className={styles.ctaPrelude}>Seu próximo passo não precisa ser escolher um procedimento. Pode ser simplesmente começar entendendo o que o seu rosto precisa.</p>
 
     <a className={styles.cta} href={appointmentUrl} target="_blank" rel="noopener noreferrer" data-cta="evaluation-whatsapp" data-experience-motion="cta">
       <span>QUERO AGENDAR MINHA AVALIAÇÃO</span>

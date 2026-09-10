@@ -1,27 +1,38 @@
-# Informações a fornecer pela Dra. Joelane
+# Conteúdo a confirmar com a Dra. Joelane
 
-Os campos abaixo são placeholders visíveis. Não representam relatos ou informações clínicas verificadas. A navegação, os CTAs, os casos e o FAQ funcionam mesmo antes de preencher o conteúdo.
+## Pendências
 
-## Arquivo central: `data/conversion.ts`
+- **Três casos (`data/cases.ts`)**: queixa, observação profissional, planejamento e resultado de cada pessoa. São 12 campos clínicos; as fotografias não permitem deduzir essas informações.
+- **Depoimento do hero (`heroVoice` em `data/conversion.ts`)**: relato real da paciente do caso 1. Os três depoimentos gerais já estão preenchidos, mas não foram vinculados a pacientes específicas.
+- **Horários de atendimento**: preencher `contactDetails.hours`. Confirmar torre/bloco, andar e sala do Hangar, se aplicáveis.
+- **Fotos recentes do ensaio**: ainda não recebidas. A foto com cânula saiu da seção de tratamentos. A seção 08 usa composição editorial com monograma, sem repetir retratos; poderá receber uma nova foto do ensaio.
+- **Domínio definitivo**: preencher `site.seo.url` se houver domínio próprio. Na Vercel, os metadados usam o domínio de produção fornecido pelo ambiente.
 
-- `heroVoice`: depoimento real relacionado ao registro do hero (`resultado-01.webp`). Após inserir o relato, mudar `pending` para `false`. Não associar um depoimento a outra pessoa.
-- `caseStudies[0..2]`: queixa, conduta e resultado de cada caso. Os vínculos são, respectivamente, `resultado-01.webp`, `resultado-02.webp` e `resultado-03.webp`. Substituir `[INSERIR QUEIXA]`, `[INSERIR CONDUTA]` e `[INSERIR RESULTADO]` apenas com informações confirmadas. Os índices referem-se aos registros, não a procedimentos presumidos.
-- `patientVoices[0..2]`: preenchidos com trechos literais dos três prints enviados em 10/09/2026 (naturalidade, escuta e confiança; anexos 1, 3 e 5). Sem identificação ou associação a casos. Nomes/iniciais, fotos e `resultIndex` são opcionais e dependem da correspondência informada pela Dra.
-- `questions[0..4].answer`: respostas da profissional às cinco dúvidas. A primeira começa aberta; todas funcionam com teclado.
-- `contactDetails.building` e `address`: preenchidos pelo print de localização: Edifício Hangar Business Park, Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador. Faltam torre/bloco, andar e sala, se aplicáveis.
-- `contactDetails.hours`: horários de atendimento.
+## Correspondência confirmada dos casos
 
-## Informações já mantidas em `data/site.ts`
+| Caso | Arquivo recebido | Uso no site |
+| --- | --- | --- |
+| 1 | caso 1 (2).HEIC | Antes — caso-1-b.webp |
+| 1 | caso 1 (1).HEIC | Depois — caso-1-a.webp |
+| 2 | caso 2 (1).PNG | Desarmonização, Registro 01 — caso-2-a.webp |
+| 2 | caso 2.jpeg | Desarmonização, Registro 02 — caso-2-b.webp |
+| 3 | caso 3.DNG | Antes — caso-3-a.webp |
+| 3 | caso 3.HEIC | Depois — caso-3-b.webp |
 
-- Dra. Joelane Bittencourt; cirurgiã-dentista; Harmonização Orofacial; CRO-BA 20242.
-- WhatsApp: +55 (71) 99671-4060.
-- Instagram: @drajoelanebittencourt.
-- Apresentação profissional e sete registros originais.
+O caso 2 não possui cronologia confirmada e não apresenta rótulos de antes/depois. O caso 1 também aparece no hero, conforme o foco em Full Face solicitado. As fotos foram convertidas para WebP e redimensionadas, sem retoque clínico. O visualizador permite consultar as fotografias completas.
 
-O título e a descrição de SEO foram atualizados. A arte OG otimizada e o favicon existentes foram preservados. Caso haja domínio próprio, informar o endereço definitivo em `seo.url`.
+## Conteúdo já incorporado
+
+- Posicionamento, identificação, possibilidades de tratamento, método, apresentação profissional e seção de avaliação enviados pela Dra.
+- Quatro perguntas e respostas fornecidas pela profissional, sem respostas clínicas inventadas.
+- Três depoimentos reais anônimos dos prints (naturalidade, escuta e confiança).
+- Endereço: Edifício Hangar Business Park, Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador.
+- WhatsApp: +55 (71) 99671-4060; Instagram: @drajoelanebittencourt; CRO-BA 20242.
+- Sete registros antigos preservados na galeria complementar, com ampliação e comparação.
+- Favicon e arte Open Graph preservados.
 
 ## Identificadores para analytics futuro
 
-`header-whatsapp`, `hero-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp` e `contact-whatsapp`.
+`header-whatsapp`, `hero-whatsapp`, `treatments-whatsapp`, `results-whatsapp`, `evaluation-whatsapp`, `final-whatsapp`, `contact-whatsapp`.
 
-Nenhum dado de conversão é enviado a serviços externos pelo site; os identificadores apenas preparam a integração futura.
+Nenhuma ferramenta de analytics foi instalada.
