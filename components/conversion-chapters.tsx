@@ -15,7 +15,7 @@ export function PainPoints() {
     <ol className="pain-list">{painPoints.map((text,i)=><li key={text} className={i===3?'pain-highlight':''} data-reveal>
       <span className="editorial-index">0{i+1}</span><p>“{text}”</p>
     </li>)}</ol>
-    <p className="pain-reassurance" data-reveal>Você não precisa saber qual procedimento fazer. <em>Essa é a minha parte.</em></p>
+    <p className="pain-reassurance" data-reveal><span>Você não precisa saber qual procedimento fazer.</span> <strong>Essa é a minha parte.</strong></p>
   </section>;
 }
 
