@@ -72,6 +72,7 @@
 .testimonials-chapter { text-align: center; }
 .voice-stage { max-width: 940px; margin: 45px auto 0; border-block: 1px solid var(--line); padding: 48px 0; }
 .voice-stage blockquote { font: italic 38px/1.4 var(--serif); }
+.voice-context { max-width: 650px; margin: 20px auto 0; font-size: 12px; line-height: 1.7; color: var(--rose-deep); }
 .voice-pending p { margin-top: 25px; font-size: clamp(16px,2vw,24px); }
 .voice-photo { border-radius: 50%; margin: 0 auto 25px; object-fit: cover; }
 .voice-navigation { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 25px; }
@@ -84,10 +85,11 @@
 .faq-item h3 { font: inherit; }
 .faq-item h3 button { display: flex; text-align: left; align-items: center; justify-content: space-between; gap: 25px; width: 100%; padding: 25px 0; line-height: 1.6; }
 .faq-item.is-open h3 { color: var(--rose-deep); }
-.faq-icon { flex: none; width: 24px; text-align: center; font-size: 26px; font-weight: 300; }
+.faq-icon { flex: none; width: 24px; height: 24px; }
 .faq-item svg { transition: transform .4s; }
 .faq-item.is-open svg { transform: rotate(180deg); }
-.faq-item.is-open svg path:last-child { opacity: 0; }
+.faq-icon path { transition: opacity .3s; }
+.faq-item.is-open .faq-icon path:last-child { opacity: 0; }
 .faq-answer { display: grid; grid-template-rows: 0fr; visibility: hidden; opacity: 0; transition: grid-template-rows .45s,opacity .3s,visibility .45s; }
 .faq-answer>div { overflow: hidden; min-height: 0; }
 .faq-answer p { padding-bottom: 25px; }
@@ -98,7 +100,8 @@
 .contact-heading .conversion-cta { background: var(--rose-light); color: var(--wine); }
 .contact-details { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 35px 7%; margin: 60px 0 0; }
 .contact-details>div { border-top: 1px solid #deceb640; padding-top: 24px; }
-.contact-details dt { font-size: 12px; letter-spacing: .12em; color: var(--rose-light); text-transform: uppercase; }
+.contact-details dt { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .12em; color: var(--rose-light); text-transform: uppercase; }
+.contact-details dt svg { flex: none; width: 20px; height: 20px; stroke-width: 1.5; }
 .contact-details dd { margin: 15px 0 0; font-size: 16px; overflow-wrap: anywhere; }
 .contact-details a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 .contact-details .content-placeholder { display: block; }

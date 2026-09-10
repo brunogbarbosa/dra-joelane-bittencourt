@@ -4,7 +4,13 @@ export type PatientVoice = {
   resultIndex?: number; objective?: string; pending: boolean;
 };
 export const heroVoice: PatientVoice = { id: 'hero', quote: '[DEPOIMENTO REAL DA PACIENTE]', pending: true };
-export const patientVoices: PatientVoice[] = [1, 2, 3].map(n => ({ id: `relato-${n}`, quote: '[DEPOIMENTO REAL DA PACIENTE]', pending: true }));
+// Transcrições/trechos literais dos prints enviados dos destaques de depoimentos.
+// Sem nomes, fotos ou vínculo com casos: a correspondência ainda não foi informada.
+export const patientVoices: PatientVoice[] = [
+  { id: 'relato-1', quote: 'Dra., estou me amando cada vez mais! Estou mais jovem, e a aparência natural é o que mais me deixa realizada. Obrigada por devolver minha autoestima de forma tão delicada.', pending: false },
+  { id: 'relato-2', quote: 'Possui uma escuta ativa, cuidadosa e bem estudiosa. Não promete mágica, lhe acolhe. Não tem pressa, é ética no cuidado com o outro no sentido do que é possível ser feito.', pending: false },
+  { id: 'relato-3', quote: 'Desde o início, ela foi extremamente atenciosa, paciente e sempre disposta a tirar minhas dúvidas, explicando tudo de forma clara e tranquila, o que me trouxe confiança.', pending: false },
+];
 export const caseStudies = [0, 1, 2].map(resultIndex => ({
   resultIndex, complaint: '[INSERIR QUEIXA]', approach: '[INSERIR CONDUTA]', result: '[INSERIR RESULTADO]',
 }));
@@ -28,4 +34,8 @@ export const questions = [
   'Como sei qual procedimento é indicado para mim?', 'Preciso fazer vários procedimentos?',
   'Como funciona a avaliação?', 'Quanto tempo dura o resultado?',
 ].map((question, i) => ({ id: `duvida-${i+1}`, question, answer: '[RESPOSTA DA PROFISSIONAL]' }));
-export const contactDetails = { address: '[ENDEREÇO COMPLETO]', hours: '[HORÁRIO DE ATENDIMENTO]' };
+export const contactDetails = {
+  building: 'Edifício Hangar Business Park',
+  address: 'Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador',
+  hours: '[HORÁRIO DE ATENDIMENTO]',
+};

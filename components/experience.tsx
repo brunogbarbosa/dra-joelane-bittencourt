@@ -1,7 +1,7 @@
 'use client';
 import { CampaignHero } from './campaign-hero';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, X, Menu } from 'lucide-react';
+import { ArrowUp, ArrowUpRight, X, Menu } from 'lucide-react';
 import { Chapters } from './chapters';
 import { site, appointmentUrl } from '@/data/site';
 
@@ -17,5 +17,5 @@ function Header(){
 }
 export function Experience(){const root=useRef<HTMLDivElement>(null);
  useEffect(()=>{const media=window.matchMedia('(prefers-reduced-motion: reduce)');if(media.matches)return;const animations:Animation[]=[];const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;animations.push(entry.target.animate([{opacity:0,transform:'translateY(22px)'},{opacity:1,transform:'translateY(0)'}],{duration:850,easing:'cubic-bezier(.2,.7,.2,1)'}));observer.unobserve(entry.target)}),{threshold:.08});root.current?.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));const stop=()=>{if(media.matches){animations.forEach(a=>a.cancel());observer.disconnect()}};media.addEventListener('change',stop);return()=>{observer.disconnect();animations.forEach(a=>a.cancel());media.removeEventListener('change',stop)}},[]);
- return <div ref={root}><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><Header/><main id="conteudo" tabIndex={-1}><CampaignHero/><Chapters/></main><footer className="footer conversion-footer"><a href="#inicio" className="footer-name">{site.name}</a><div className="footer-bottom"><span>© {new Date().getFullYear()} · {site.cro}</span><a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#inicio">Voltar ao início ↑</a></div></footer></div>
+ return <div ref={root}><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><Header/><main id="conteudo" tabIndex={-1}><CampaignHero/><Chapters/></main><footer className="footer conversion-footer"><a href="#inicio" className="footer-name">{site.name}</a><div className="footer-bottom"><span>© {new Date().getFullYear()} · {site.cro}</span><a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#inicio">Voltar ao início <ArrowUp size={16} aria-hidden="true"/></a></div></footer></div>
 }

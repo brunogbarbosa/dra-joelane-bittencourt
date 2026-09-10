@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useId, useState } from 'react';
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Plus, Stethoscope } from 'lucide-react';
 import { site, appointmentUrl } from '@/data/site';
 import { painPoints, treatments, careSteps, caseStudies, patientVoices, questions, contactDetails } from '@/data/conversion';
 import { BeforeAfter } from './before-after';
@@ -36,7 +36,7 @@ export function CaseStudies({ onOpen }: { onOpen: (index:number, button:HTMLButt
   const current=caseStudies[active];
   const pending=[current.complaint,current.approach,current.result].some(value=>value.startsWith('['));
   return <div className="case-studies">
-    <div className="case-navigation" role="group" aria-label="Escolher estudo de caso">{caseStudies.map((_,i)=><button key={i} aria-pressed={active===i} onClick={()=>setActive(i)}>CASO 0{i+1}<span aria-hidden="true">↗</span></button>)}</div>
+    <div className="case-navigation" role="group" aria-label="Escolher estudo de caso">{caseStudies.map((_,i)=><button key={i} aria-pressed={active===i} onClick={()=>setActive(i)}>CASO 0{i+1}<ArrowUpRight size={18} strokeWidth={1.5} aria-hidden="true"/></button>)}</div>
     <div className="case-layout" key={active}>
       <BeforeAfter record={site.results.items[current.resultIndex]} title={`Caso 0${active+1} · Antes e depois`}/>
       <div className="case-copy" aria-live="polite"><p className="chapter-tag">Um olhar mais próximo / 0{active+1}</p>
@@ -73,6 +73,7 @@ export function Testimonials() {
       {voice.name&&<p>{voice.name}</p>}{voice.objective&&<p>{voice.objective}</p>}
       {voice.resultIndex!==undefined&&<BeforeAfter record={site.results.items[voice.resultIndex]}/>}
     </div>
+    <p className="voice-context">Trechos de relatos compartilhados nos destaques do Instagram. Experiências individuais.</p>
     <div className="voice-navigation"><button className="viewer-icon" aria-label="Depoimento anterior" onClick={()=>setIndex((index+patientVoices.length-1)%patientVoices.length)}><ArrowLeft/></button>
       <div role="group" aria-label="Selecionar depoimento">{patientVoices.map((v,i)=><button key={v.id} aria-label={`Depoimento ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>0{i+1}</button>)}</div>
       <button className="viewer-icon" aria-label="Próximo depoimento" onClick={()=>setIndex((index+1)%patientVoices.length)}><ArrowRight/></button>
@@ -85,7 +86,7 @@ export function FAQ() {
   return <section id="duvidas" className="faq-chapter conversion-section" aria-labelledby="faq-title">
     <div><p className="chapter-tag">07 / Espaço para suas perguntas</p><h2 id="faq-title" data-reveal>Dúvidas<br/><em>frequentes</em></h2></div>
     <div className="faq-list">{questions.map(q=>{const expanded=open===q.id;return <article className={`faq-item ${expanded?'is-open':''}`} key={q.id}>
-      <h3><button id={`${uid}-${q.id}-button`} aria-expanded={expanded} aria-controls={`${uid}-${q.id}-panel`} onClick={()=>setOpen(expanded?null:q.id)}>{q.question}<span className="faq-icon" aria-hidden="true">{expanded?'−':'+'}</span></button></h3>
+      <h3><button id={`${uid}-${q.id}-button`} aria-expanded={expanded} aria-controls={`${uid}-${q.id}-panel`} onClick={()=>setOpen(expanded?null:q.id)}>{q.question}<Plus className="faq-icon" size={24} strokeWidth={1.5} aria-hidden="true"/></button></h3>
       <div className="faq-answer" id={`${uid}-${q.id}-panel`} role="region" aria-labelledby={`${uid}-${q.id}-button`} aria-hidden={!expanded} inert={!expanded}><div><p className="content-placeholder" data-placeholder>{q.answer}</p></div></div>
     </article>;})}</div>
   </section>;
@@ -95,11 +96,11 @@ export function ContactDetails() {
   return <section id="contato" className="contact-chapter conversion-section" aria-labelledby="contact-title">
     <p className="chapter-tag">10 / Vamos conversar</p><div className="contact-heading"><h2 id="contact-title">O próximo passo<br/><em>começa com você.</em></h2><AppointmentLink id="final-whatsapp">AGENDAR AVALIAÇÃO</AppointmentLink></div>
     <dl className="contact-details">
-      <div><dt>Endereço</dt><dd>{site.address}<span className="content-placeholder" data-placeholder>{contactDetails.address}</span></dd></div>
-      <div><dt>WhatsApp</dt><dd><a href={appointmentUrl} data-cta="contact-whatsapp" target="_blank" rel="noopener noreferrer">{site.phone}<ArrowUpRight size={16}/></a></dd></div>
-      <div><dt>Horários de atendimento</dt><dd className="content-placeholder" data-placeholder>{contactDetails.hours}</dd></div>
-      <div><dt>Instagram</dt><dd><a href={site.instagram} target="_blank" rel="noopener noreferrer">{site.instagramHandle}<ArrowUpRight size={16}/></a></dd></div>
-      <div><dt>Informações profissionais</dt><dd>Dra. {site.name}<br/>Cirurgiã-dentista · {site.cro}<br/>Harmonização Orofacial</dd></div>
+      <div><dt><MapPin aria-hidden="true"/>Endereço</dt><dd>{contactDetails.building}<br/>{contactDetails.address}</dd></div>
+      <div><dt><MessageCircle aria-hidden="true"/>WhatsApp</dt><dd><a href={appointmentUrl} data-cta="contact-whatsapp" target="_blank" rel="noopener noreferrer">{site.phone}<ArrowUpRight size={16} aria-hidden="true"/></a></dd></div>
+      <div><dt><Clock3 aria-hidden="true"/>Horários de atendimento</dt><dd className="content-placeholder" data-placeholder>{contactDetails.hours}</dd></div>
+      <div><dt><Instagram aria-hidden="true"/>Instagram</dt><dd><a href={site.instagram} target="_blank" rel="noopener noreferrer">{site.instagramHandle}<ArrowUpRight size={16} aria-hidden="true"/></a></dd></div>
+      <div><dt><Stethoscope aria-hidden="true"/>Informações profissionais</dt><dd>Dra. {site.name}<br/>Cirurgiã-dentista · {site.cro}<br/>Harmonização Orofacial</dd></div>
     </dl>
   </section>;
 }

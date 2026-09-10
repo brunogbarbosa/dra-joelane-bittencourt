@@ -6,9 +6,9 @@ Os campos abaixo são placeholders visíveis. Não representam relatos ou inform
 
 - `heroVoice`: depoimento real relacionado ao registro do hero (`resultado-01.webp`). Após inserir o relato, mudar `pending` para `false`. Não associar um depoimento a outra pessoa.
 - `caseStudies[0..2]`: queixa, conduta e resultado de cada caso. Os vínculos são, respectivamente, `resultado-01.webp`, `resultado-02.webp` e `resultado-03.webp`. Substituir `[INSERIR QUEIXA]`, `[INSERIR CONDUTA]` e `[INSERIR RESULTADO]` apenas com informações confirmadas. Os índices referem-se aos registros, não a procedimentos presumidos.
-- `patientVoices[0..2]`: três depoimentos reais. Cada entrada pode receber nome/iniciais autorizados, `photo`, `photoAlt`, `objective` e `resultIndex` do registro correspondente. Marcar `pending: false` apenas quando o relato for real e aprovado. Fotos e nomes são opcionais.
+- `patientVoices[0..2]`: preenchidos com trechos literais dos três prints enviados em 10/09/2026 (naturalidade, escuta e confiança; anexos 1, 3 e 5). Sem identificação ou associação a casos. Nomes/iniciais, fotos e `resultIndex` são opcionais e dependem da correspondência informada pela Dra.
 - `questions[0..4].answer`: respostas da profissional às cinco dúvidas. A primeira começa aberta; todas funcionam com teclado.
-- `contactDetails.address`: endereço completo. Salvador/BA já está confirmado na base.
+- `contactDetails.building` e `address`: preenchidos pelo print de localização: Edifício Hangar Business Park, Av. Luís Viana Filho, 13223 — São Cristóvão, Salvador. Faltam torre/bloco, andar e sala, se aplicáveis.
 - `contactDetails.hours`: horários de atendimento.
 
 ## Informações já mantidas em `data/site.ts`
