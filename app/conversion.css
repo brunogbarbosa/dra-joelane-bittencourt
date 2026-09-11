@@ -265,6 +265,7 @@
 .conversion-hero .comparison-title { text-align: center; }
 .conversion-hero .hero-result-note { text-align: center; }
 .case-media .case-photo-frame { aspect-ratio: 1/2; }
+.case-media .case-photos-roseli .case-photo-frame { aspect-ratio: 2/3; background: #fff; }
 .case-layout { grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); align-items: center; }
 
 /* The portrait starts beside the manifesto, without an empty title column. */
