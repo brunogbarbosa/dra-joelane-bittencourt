@@ -84,7 +84,7 @@ export function ExperienceStatement() {
 
     <div className={styles.evaluationBody}>
     <figure className={styles.evaluationPhoto}>
-      <Image src={site.images.evaluation} alt="Detalhe do trabalho da Dra. Joelane: registros fotográficos no notebook durante o planejamento" width={1800} height={1200} loading="lazy" sizes="(max-width:800px) 88vw, 52vw" />
+      <Image src={site.images.evaluation} alt="Dra. Joelane Bittencourt fazendo anotações durante a avaliação de um paciente no consultório" width={853} height={1280} loading="lazy" sizes="(max-width:800px) 88vw, 52vw" />
       <figcaption>Um olhar atento a cada detalhe.</figcaption>
     </figure>
     <div className={styles.quote} data-experience-motion="quote">
