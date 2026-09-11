@@ -10,7 +10,7 @@ export const site = {
   instagram: 'https://www.instagram.com/drajoelanebittencourt/', instagramHandle: '@drajoelanebittencourt',
   philosophy: ['NATURALIDADE', 'ANTES DE', 'EXCESSOS.'],
   colors: { paper: '#faf7f1', ink: '#352c24', taupe: '#765c39', champagne: '#deceb6', dark: '#30271f' },
-  images: { hero: '/images/joelane-hero-rosto.webp', presentation: '/images/joelane-apresentacao-estudio.webp', about: '/images/joelane-cuidado-paciente.webp', evaluation: '/images/joelane-avaliacao-detalhes.webp', beauty: '/images/joelane-cuidado.webp' },
+  images: { hero: '/images/joelane-retrato-ensaio.webp', presentation: '/images/joelane-apresentacao-estudio.webp', about: '/images/joelane-cuidado-paciente.webp', evaluation: '/images/joelane-avaliacao-detalhes.webp', beauty: '/images/joelane-cuidado.webp' },
   procedures: [] as Procedure[], office: [] as { src: string; alt: string }[], testimonials: [] as Testimonial[],
   results: { enabled: true, items: [
     { image: '/images/resultado-01.webp', label: 'Harmonia do perfil', alt: 'Registro 01 de antes e depois fornecido pela Dra. Joelane Bittencourt: harmonia do perfil', orientation: 'horizontal', beforeShare: 0.4883177570093458, comparisonRatio: 0.39285714285714285 },
