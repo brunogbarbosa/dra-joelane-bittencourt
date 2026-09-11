@@ -424,13 +424,22 @@
 .conversion-hero .hero-introduction .campaign-subtitle { margin-inline: 0; max-width: 540px; }
 .conversion-hero .hero-doctor { width: 100%; max-width: 540px; aspect-ratio: 4/5; justify-self: end; }
 .conversion-hero .hero-doctor .campaign-silhouette { position: absolute; inset: 0; overflow: hidden; border-radius: 150px 10px 10px 10px; background: #deceb6; box-shadow: 18px 18px 0 -6px #deceb640; }
-.conversion-hero .hero-doctor img { object-fit: cover; object-position: 64% 38%; }
+.conversion-hero .hero-doctor img { object-fit: cover; object-position: 50% 18%; }
 .conversion-hero .hero-case { width: min(100%,1000px); margin-inline: auto; border-top: 1px solid var(--line); padding-top: clamp(28px,3vw,44px); }
 .conversion-hero .hero-case .comparison-title { text-align: left; padding-inline: 0; margin-bottom: 24px; font-size: clamp(23px,2.5vw,34px); }
 .conversion-hero .hero-case .hero-voice { max-width: 850px; margin: 28px auto 0; padding: 0 0 0 24px; border-left: 1px solid var(--rose); }
 .conversion-hero .hero-case .hero-voice blockquote { font-size: clamp(22px,2.1vw,28px); line-height: 1.45; }
 .conversion-hero .hero-case .review-source { text-decoration: none; font-size: 13px; }
 .conversion-hero .hero-case .hero-result-note { padding-inline: 0; }
+.conversion-hero .hero-contact-inline { width: min(100%, 430px); margin: 28px 0 0; align-items: stretch; }
+.conversion-hero .hero-contact-inline .hero-booking { width: 100%; min-height: 58px; padding: 17px 24px; justify-content: center; }
+.conversion-hero .hero-contact-inline .hero-booking>span { font-size: 14px; line-height: 1.2; letter-spacing: .09em; }
+.conversion-hero .hero-pillars { display: grid; grid-template-columns: repeat(3,1fr); width: min(100%, 940px); margin: 4px auto 0; border-bottom: 1px solid var(--line); padding: 14px 0 22px; }
+.conversion-hero .hero-pillars>div { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 58px; color: var(--rose-deep); text-align: left; }
+.conversion-hero .hero-pillars>div+div { border-left: 1px solid var(--line); }
+.conversion-hero .hero-pillars svg { width: 28px; height: 28px; stroke-width: 1.25; flex: none; }
+.conversion-hero .hero-pillars span { font-size: 13px; line-height: 1.35; }
+.conversion-hero>.campaign-inner>.hero-credentials { text-align: center; margin: 20px auto 0; font-size: 13px; line-height: 1.7; letter-spacing: .08em; color: var(--rose-deep); }
 .care-chapter .care-photo { aspect-ratio: 492/876; border-radius: 56px 6px 6px 6px; }
 .care-chapter .care-photo img { object-fit: contain; object-position: center; }
 @media(max-width:1100px) {
@@ -451,5 +460,13 @@
  .conversion-hero .hero-case .hero-voice { padding-left: 16px; margin-top: 22px; }
  .conversion-hero .hero-case .hero-voice blockquote { font-size: 21px; }
  .conversion-hero .hero-case .comparison-title { font-size: 24px; }
+ .conversion-hero .hero-contact-inline { width: calc(100vw - 44px); max-width: none; margin-top: 22px; }
+ .conversion-hero .hero-contact-inline .hero-booking { min-height: 56px; padding: 16px 12px; }
+ .conversion-hero .hero-contact-inline .hero-booking>span { font-size: 12px; letter-spacing: .06em; white-space: nowrap; }
+ .conversion-hero .hero-pillars { width: 100%; margin-top: 4px; padding: 12px 0 16px; }
+ .conversion-hero .hero-pillars>div { flex-direction: column; gap: 5px; min-height: 66px; text-align: center; }
+ .conversion-hero .hero-pillars svg { width: 23px; height: 23px; }
+ .conversion-hero .hero-pillars span { font-size: 11px; line-height: 1.25; }
+ .conversion-hero>.campaign-inner>.hero-credentials { margin-top: 16px; font-size: 11px; line-height: 1.5; letter-spacing: .05em; }
  .care-chapter .care-photo { max-width: 330px; }
 }
