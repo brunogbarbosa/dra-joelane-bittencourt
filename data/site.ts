@@ -4,7 +4,7 @@ export const site = {
   name: 'Joelane Bittencourt', monogram: 'JB',
   headline: 'Harmonização orofacial. Rejuvenescimento facial com naturalidade.',
   cro: 'CRO-BA 20242',
-  bio: 'Meu trabalho parte de uma ideia simples: nenhum rosto deveria receber o mesmo tratamento apenas porque existe uma tendência ou um procedimento disponível. Acredito em resultados construídos com critério, planejamento e respeito à identidade de cada paciente. Por isso, antes de indicar qualquer tratamento, procuro entender o rosto como um todo e aquilo que realmente faz sentido para cada pessoa.',
+  bio: 'Meu trabalho parte de uma ideia simples: nenhum rosto deveria receber o mesmo tratamento apenas porque existe uma tendência ou um procedimento disponível.\n\nPor isso, antes de indicar qualquer tratamento, procuro entender o rosto como um todo, suas características, proporções e aquilo que realmente faz sentido para cada pessoa.',
   education: [] as string[], specialties: ['Harmonização Orofacial'],
   phone: '+55 (71) 99671-4060', whatsapp: '5571996714060', whatsappUrl: '', address: 'Salvador · Bahia', professionalPhilosophy: '',
   instagram: 'https://www.instagram.com/drajoelanebittencourt/', instagramHandle: '@drajoelanebittencourt',
@@ -23,4 +23,4 @@ export const site = {
   ] },
   seo: { title: 'Dra. Joelane Bittencourt | Harmonização Facial em Salvador', description: 'Harmonização Orofacial e rejuvenescimento facial em Salvador com a Dra. Joelane Bittencourt. Avaliação individualizada e planejamento para o seu rosto.', url: '' },
 };
-export const appointmentUrl = site.whatsappUrl || (site.whatsapp ? `https://wa.me/${site.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent('Olá, Dra. Joelane! Conheci seu trabalho pelo site e gostaria de agendar uma avaliação.')}` : site.instagram);
+export const appointmentUrl = site.whatsappUrl || (site.whatsapp ? `https://wa.me/${site.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent('Olá! Conheci o trabalho da Dra. Joelane pelo site e gostaria de saber mais sobre a avaliação e o planejamento facial.')}` : site.instagram);

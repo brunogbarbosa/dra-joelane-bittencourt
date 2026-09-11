@@ -95,7 +95,7 @@ export function AuthorChapter() {
       <article className={styles.card} data-author-motion="card">
         <p className={styles.cardLabel}>DRA. JOELANE BITTENCOURT</p>
         <p className={styles.cardCopy}>Acredito em resultados construídos com critério, planejamento e respeito à identidade de cada paciente.</p>
-        <details className="professional-details"><summary>Minha abordagem</summary><p>{biography}</p></details>
+        <details className="professional-details"><summary>Minha abordagem</summary>{biography.split('\n\n').map(paragraph=><p key={paragraph}>{paragraph}</p>)}</details>
         <a className={styles.cta} href={site.instagram} target="_blank" rel="noreferrer">
           <span>Conheça meu trabalho</span>
           <span className={styles.ctaCircle} aria-hidden="true"><ArrowUpRight size={24} strokeWidth={1.25} /></span>
