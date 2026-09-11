@@ -1,6 +1,7 @@
 export type CasePhoto = {
   src: string; alt: string; label: string; width: number; height: number; position: string; presentationMask?: string;
   zoom?: number; zoomOrigin?: string;
+  framing?: { x: number; y: number; width: number; height: number };
 };
 export type ClinicalCase = {
   id: string; title: string; patient?: string; mode: 'comparison' | 'reference'; photos: [CasePhoto,CasePhoto];
@@ -19,8 +20,8 @@ const roseliCase: ClinicalCase =
     ['O olhar', 'A perda de volume e sustentação pode alterar a percepção dos contornos faciais. Por isso, o rosto foi avaliado como um todo, respeitando suas características e o momento vivido pela paciente.'],
     ['O resultado', 'Um planejamento pensado para restaurar equilíbrio e sustentação, preservando aquilo que faz parte da sua identidade.'],
   ], photos: [
-    { src:'/images/roseli-antes-atualizado.webp', label:'Antes', alt:'Roseli: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1122, height:1087, position:'center' },
-    { src:'/images/caso-1-depois-revisado.webp', label:'Depois', alt:'Roseli: registro após o tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'50% 0%', zoom:1.3, zoomOrigin:'50% 0%' },
+    { src:'/images/roseli-antes-alinhado.webp', label:'Antes', alt:'Roseli: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1122, height:1186, position:'center', framing:{x:164,y:-20,width:774,height:1161} },
+    { src:'/images/roseli-depois-alinhado.webp', label:'Depois', alt:'Roseli: registro após o tratamento, fornecido pela Dra. Joelane', width:1122, height:1307, position:'center', framing:{x:198,y:-58,width:724,height:1086} },
   ]};
 
 // Cris abre a página; Roseli ocupa o primeiro estudo de caso.
@@ -41,8 +42,8 @@ export const clinicalCases: ClinicalCase[] = [
     ['O olhar', 'Antes de adicionar qualquer produto, decidimos remover o preenchimento anterior e reavaliar o rosto como um todo.'],
     ['O resultado', 'Um novo planejamento, buscando devolver harmonia e preservar sua identidade.'],
   ], photos: [
-    { src:'/images/bruna-antes-atualizado.webp', label:'Antes', alt:'Bruna: antes, fotografia fornecida pela Dra. Joelane', width:1320, height:1480, position:'48% 50%' },
-    { src:'/images/caso-2-b.webp', label:'Depois', alt:'Caso 2, desarmonização: depois, paciente com roupa branca', width:1100, height:1429, position:'50% 40%', zoom:1.9, zoomOrigin:'48% 11%' },
+    { src:'/images/bruna-antes-alinhado.webp', label:'Antes', alt:'Bruna: antes, fotografia fornecida pela Dra. Joelane', width:1320, height:1548, position:'center', framing:{x:238,y:0,width:725,height:1450} },
+    { src:'/images/caso-2-b.webp', label:'Depois', alt:'Caso 2, desarmonização: depois, paciente com roupa branca', width:1100, height:1429, position:'center', framing:{x:349,y:125,width:357,height:714} },
   ]},
   { id: 'caso-3', patient: 'Luciano', title: 'Um novo momento para o rosto', mode: 'comparison', ...pending, editorial: [
     ['A história', 'Após iniciar seu processo de emagrecimento com Mounjaro, Luciano começou a perceber a perda de sustentação e volume no rosto.'],

@@ -1,5 +1,12 @@
 # Conteúdo e fontes — Dra. Joelane
 
+## Última revisão — alinhamento de Roseli e Bruna
+
+- Roseli: usados exatamente os anexos `codex-clipboard-1e4a3eb1-1cad-4b67-a163-dd526860e968.png` (antes, 1122 × 1186) e `codex-clipboard-752e5568-1ef1-4d87-ab10-8ba26221936f.png` (depois, 1122 × 1307), convertidos para `roseli-antes-alinhado.webp` e `roseli-depois-alinhado.webp` sem redução de resolução.
+- Bruna: antes substituído por `codex-clipboard-09b83154-c4f5-4198-a74c-95522383a9e8.png` (1320 × 1548), convertido para `bruna-antes-alinhado.webp`. Depois mantido em `caso-2-b.webp`.
+- Enquadramento individual por coordenadas da imagem: escala e posição ajustadas para aproximar a altura do topo da cabeça e do queixo em cada par. Ajuste proporcional entre desktop, tablet e celular, sem distorção ou retoque dos rostos. O visualizador mantém as fotografias completas.
+- Estas fontes substituem as versões anteriores citadas no histórico abaixo.
+
 ## Atualização de 11/09/2026 — ordem atual dos casos
 
 - Hero: Cris, com as fotos `cris-antes.webp` e `cris-depois.webp`. O relato foi transcrito literalmente do print `codex-clipboard-36b83c0d-08af-4b6a-a9a8-a727fd2da422.png`; o usuário confirmou sua correspondência com Cris. Identificado como depoimento do Instagram, sem atribuição ao Google ou link inventado.
