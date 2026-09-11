@@ -442,9 +442,12 @@
  .conversion-hero .hero-case .hero-voice { margin-inline: 4vw; }
 }
 @media(max-width:700px) {
- .hero-introduction { grid-template-columns: 1fr; gap: 28px; }
- .conversion-hero .hero-doctor { width: 100%; max-width: 430px; aspect-ratio: 4/5; justify-self: center; }
- .conversion-hero .hero-doctor .campaign-silhouette { border-top-left-radius: 100px; box-shadow: 10px 10px 0 -3px #deceb640; }
+ .hero-introduction { grid-template-columns: minmax(0,1fr) minmax(108px,.52fr); align-items: start; gap: 14px; }
+ .conversion-hero .hero-introduction .campaign-copy { min-width: 0; }
+ .conversion-hero .hero-introduction .campaign-title-line:first-child { max-width: 100%; }
+ .conversion-hero .hero-introduction .campaign-subtitle { max-width: 100%; }
+ .conversion-hero .hero-doctor { width: 100%; max-width: none; aspect-ratio: 3/4; justify-self: stretch; margin-top: 34px; }
+ .conversion-hero .hero-doctor .campaign-silhouette { border-top-left-radius: 66px; box-shadow: 8px 8px 0 -3px #deceb640; }
  .conversion-hero .hero-case .hero-voice { padding-left: 16px; margin-top: 22px; }
  .conversion-hero .hero-case .hero-voice blockquote { font-size: 21px; }
  .conversion-hero .hero-case .comparison-title { font-size: 24px; }
