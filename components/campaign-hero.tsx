@@ -42,6 +42,9 @@ export function CampaignHero() {
       <div className="campaign-copy">
         <p className="campaign-kicker">HARMONIZAÇÃO FACIAL EM SALVADOR</p>
         <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
+        <div className="campaign-action hero-primary-action">
+          <AppointmentLink id="hero-whatsapp" className="hero-booking"><span>QUERO AGENDAR</span><span>MINHA AVALIAÇÃO</span></AppointmentLink>
+        </div>
         <p className="campaign-subtitle">Avaliação e planejamento para entender seu rosto como um todo e preservar quem você é.</p>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
@@ -50,7 +53,7 @@ export function CampaignHero() {
         <source media="(max-width:700px)" srcSet="/images/joelane-hero-mobile.webp"/>
         <Image src={site.images.hero} alt="Dra. Joelane Bittencourt em seu consultório" fill preload sizes="(max-width:700px) 88vw, 44vw"/>
         </picture>
-      </div><figcaption className="hero-mobile-caption">Beleza real.<br/>Resultados naturais.</figcaption></figure>
+      </div></figure>
       </div>
       <div className="hero-case">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
@@ -59,7 +62,6 @@ export function CampaignHero() {
         <p className="hero-result-note">Resultados individuais. Fotografias fornecidas pela profissional.</p>
       </div>
       <div className="campaign-action hero-contact">
-        <AppointmentLink id="hero-whatsapp" className="hero-booking"><span>QUERO AGENDAR</span><span>MINHA AVALIAÇÃO</span></AppointmentLink>
         <a className="hero-phone" href={appointmentUrl} target="_blank" rel="noopener noreferrer" data-cta="hero-phone-whatsapp" aria-label={`Agendar pelo WhatsApp: ${site.phone}`}><Phone size={23} aria-hidden="true"/><span>{site.phone.replace('+55 ', '')}</span></a>
       </div>
       <SmileSeal/>
