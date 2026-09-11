@@ -3,7 +3,7 @@
 ## Atualização de 11/09/2026 — ordem atual dos casos
 
 - Hero: Cris, com as fotos `cris-antes.webp` e `cris-depois.webp`. O relato foi transcrito literalmente do print `codex-clipboard-36b83c0d-08af-4b6a-a9a8-a727fd2da422.png`; o usuário confirmou sua correspondência com Cris. Identificado como depoimento do Instagram, sem atribuição ao Google ou link inventado.
-- Caso 01: Roseli, com as fotos anteriormente utilizadas no hero. Sua avaliação do Google permanece no carrossel. O texto específico da história clínica de Cris não foi transferido para Roseli; o conteúdo de Cris continua preservado em `heroCase.editorial`.
+- Caso 01: Roseli. Por correção expressa do usuário, a história anteriormente apresentada no caso de Cris foi restaurada, alterando apenas o nome para Roseli. Mantidos o título e os textos de A história, O olhar e O resultado. Sua avaliação do Google permanece no carrossel. As novas fotos enviadas são `codex-clipboard-db4f0ab0-ae64-47ee-a0ef-149806f4ea43.png` (antes) e `codex-clipboard-3ad1ebb1-9e2f-45a4-bd64-c1c7203297de.png` (depois), otimizadas como `roseli-antes-atualizado.webp` e `roseli-depois-atualizado.webp`, sem redução de resolução ou retoque.
 - Caso 02: Bruna. Novo antes: `codex-clipboard-bf1907ad-9d55-4c13-8bc0-8128e5cd4e18.png`, otimizado em `bruna-antes-atualizado.webp` (1320 × 1480). Versão anterior preservada.
 - Caso 03: Luciano. Zoom do antes ajustado de 1,30 para 1,45 para aproximar a escala do rosto à do depois, mantendo o original disponível na ampliação.
 - As notas abaixo registram a configuração anterior e o histórico de fontes.

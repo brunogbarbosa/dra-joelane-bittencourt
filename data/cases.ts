@@ -14,13 +14,13 @@ const pending = {
 
 // Ordem de antes/depois confirmada pelo usuário, incluindo o caso 2.
 const roseliCase: ClinicalCase =
-  { id: 'roseli', patient: 'Roseli', title: 'Full Face', mode: 'comparison', ...pending, editorial: [
-    ['O foco', 'Full Face: um olhar para o rosto como um todo.'],
-    ['O registro', 'Antes e depois compartilhados pela Dra. Joelane. Cada fotografia faz parte da história dessa paciente.'],
-    ['A filosofia do cuidado', 'Entender estrutura, proporções e individualidade antes de indicar. Cada escolha precisa ter um motivo.'],
+  { id: 'roseli', patient: 'Roseli', title: 'Equilíbrio após o emagrecimento', mode: 'comparison', ...pending, editorial: [
+    ['A história', 'Após uma perda importante de peso, Roseli começou a perceber mudanças que também se refletiram no rosto.'],
+    ['O olhar', 'A perda de volume e sustentação pode alterar a percepção dos contornos faciais. Por isso, o rosto foi avaliado como um todo, respeitando suas características e o momento vivido pela paciente.'],
+    ['O resultado', 'Um planejamento pensado para restaurar equilíbrio e sustentação, preservando aquilo que faz parte da sua identidade.'],
   ], photos: [
-    { src:'/images/roseli-antes-rosto.webp', label:'Antes', alt:'Caso 1: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1122, height:1087, position:'center' },
-    { src:'/images/roseli-depois-rosto.webp', label:'Depois', alt:'Caso 1: registro após o tratamento, fornecido pela Dra. Joelane', width:1122, height:1004, position:'center' },
+    { src:'/images/roseli-antes-atualizado.webp', label:'Antes', alt:'Roseli: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1122, height:1087, position:'center' },
+    { src:'/images/roseli-depois-atualizado.webp', label:'Depois', alt:'Roseli: registro após o tratamento, fornecido pela Dra. Joelane', width:1122, height:1004, position:'center' },
   ]};
 
 // Cris abre a página; Roseli ocupa o primeiro estudo de caso.
