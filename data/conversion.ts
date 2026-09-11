@@ -33,16 +33,16 @@ export const treatments = [
   ['Para valorizar', 'Lábios, perfil e outros pontos que podem ser aprimorados sem perder sua identidade.'],
 ];
 export const careSteps = [
-  ['Entender antes de indicar', 'Nem sempre aquilo que o paciente acredita precisar é o que realmente faz sentido para o seu rosto.'],
+  ['Entender antes de indicar', 'Nem sempre aquilo que você acredita precisar é o que realmente faz sentido para o seu rosto.'],
   ['Planejar antes de transformar', 'Cada escolha precisa ter um motivo. Nada deve ser feito apenas porque está em tendência.'],
   ['Tratar sem descaracterizar', 'Meu objetivo não é criar um novo rosto. É valorizar o seu.'],
-  ['Cuidar além do procedimento', 'Dependendo da necessidade, o planejamento pode envolver uma visão mais ampla do paciente e do processo de envelhecimento.'],
+  ['Cuidar além do procedimento', 'Dependendo da necessidade, o cuidado pode ir além do procedimento e considerar outros fatores que influenciam o envelhecimento e a qualidade da pele.'],
 ];
 export const questions = [
   { question: 'Tenho medo de ficar artificial. Como você trabalha?', answer: 'Naturalidade não significa ausência de resultado. Significa alcançar mudanças que façam sentido para o seu rosto, respeitando seus traços e evitando excessos.' },
   { question: 'Como sei o que preciso fazer?', answer: 'Você não precisa chegar sabendo qual procedimento deseja. A avaliação existe justamente para entender suas queixas e definir o que realmente faz sentido para você.' },
   { question: 'Preciso fazer tudo de uma vez?', answer: 'Não. Um planejamento pode ser construído por etapas, respeitando suas necessidades, prioridades e o momento de cada paciente.' },
-  { question: 'Como funciona a avaliação?', answer: 'Na avaliação, conversamos sobre suas queixas, expectativas e histórico. Analiso o rosto, suas proporções e aquilo que pode fazer sentido dentro de um planejamento individualizado.' },
+  { question: 'Como funciona a avaliação?', answer: 'Na avaliação, conversamos sobre suas queixas, expectativas e histórico. Analiso o rosto como um todo e, a partir das suas características e necessidades, construímos um planejamento individualizado.' },
 ].map((q,i) => ({ id: `duvida-${i+1}`, ...q }));
 export const contactDetails = {
   building: 'Edifício Hangar Business Park',

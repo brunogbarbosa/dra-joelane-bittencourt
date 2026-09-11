@@ -90,7 +90,7 @@ export function ExperienceStatement() {
     <div className={styles.quote} data-experience-motion="quote">
 
       <div>
-        <p>Conversamos sobre suas queixas, expectativas e histórico. A análise do rosto e das suas proporções orienta o planejamento.</p>
+        <p>Conversamos sobre suas queixas, expectativas e histórico. A análise do rosto e das suas proporções orienta cada escolha do planejamento.</p>
         <details className="professional-details"><summary>Um olhar mais amplo</summary><p>Em alguns casos, uma visão mais ampla também pode ser necessária para compreender fatores que influenciam pele, envelhecimento e resposta aos tratamentos.</p></details>
         <p className={styles.evaluationEmphasis}>Você não sai com uma fórmula pronta. Sai com uma estratégia pensada para você.</p>
       </div>
