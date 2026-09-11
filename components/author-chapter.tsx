@@ -85,7 +85,7 @@ export function AuthorChapter() {
 
       <figure className={styles.photo} data-author-motion="photo">
         <Image
-          src={site.images.hero}
+          src={site.images.presentation}
           alt="Retrato profissional da Dra. Joelane Bittencourt"
           fill
           sizes="(max-width: 700px) 88vw, (max-width: 1600px) 46vw, 680px"

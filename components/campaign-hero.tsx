@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { CasePhotos } from './case-photos';
 import { heroCase } from '@/data/cases';
 import { AppointmentLink } from './appointment-link';
@@ -37,18 +38,23 @@ export function CampaignHero() {
     <div className="campaign-organic campaign-organic-two" aria-hidden="true"/>
     <div className="campaign-contour" aria-hidden="true"/>
     <div className="campaign-inner">
+      <div className="hero-introduction">
       <div className="campaign-copy">
         <p className="campaign-kicker">HARMONIZAÇÃO FACIAL EM SALVADOR</p>
         <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
         <p className="campaign-subtitle">Avaliação e planejamento para entender seu rosto como um todo e preservar quem você é.</p>
-        <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><span className="review-source">{heroVoice.name} · Depoimento compartilhado no Instagram</span></div>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
-      <div className="campaign-portrait"><div className="campaign-silhouette">
+      <figure className="campaign-portrait hero-doctor"><div className="campaign-silhouette">
+        <Image src={site.images.hero} alt="Dra. Joelane Bittencourt em seu consultório" fill preload sizes="(max-width:700px) 88vw, 44vw"/>
+      </div></figure>
+      </div>
+      <div className="hero-case">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
-        <CasePhotos record={heroCase} priority/>
+        <CasePhotos record={heroCase}/>
+        <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><span className="review-source">{heroVoice.name} · Depoimento compartilhado no Instagram</span></div>
         <p className="hero-result-note">Resultados individuais. Fotografias fornecidas pela profissional.</p>
-      </div></div>
+      </div>
       <div className="campaign-action hero-contact">
         <AppointmentLink id="hero-whatsapp" className="hero-booking"><span>QUERO AGENDAR</span><span>MINHA AVALIAÇÃO</span></AppointmentLink>
         <a className="hero-phone" href={appointmentUrl} target="_blank" rel="noopener noreferrer" data-cta="hero-phone-whatsapp" aria-label={`Agendar pelo WhatsApp: ${site.phone}`}><Phone size={23} aria-hidden="true"/><span>{site.phone.replace('+55 ', '')}</span></a>

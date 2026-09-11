@@ -38,7 +38,7 @@ export function CareMethod() {
     <p className="chapter-tag">05 / Critério · Planejamento · Identidade</p>
     <div className="care-intro" data-reveal><p>Um resultado bonito não depende apenas da quantidade de produto utilizada. Depende de entender estrutura, proporções, envelhecimento e aquilo que realmente precisa ser tratado.</p></div>
     <div className="care-heading"><h2 id="care-title" data-reveal>O meu jeito<br/><em>de cuidar</em></h2></div>
-    <div className="care-body"><figure className="care-photo"><div className="care-photo-image"><Image src={site.images.about} alt="Dra. Joelane Bittencourt durante o planejamento no consultório" fill sizes="(max-width:700px) 88vw, 44vw"/></div></figure>
+    <div className="care-body"><figure className="care-photo"><div className="care-photo-image"><Image src={site.images.about} alt="Dra. Joelane Bittencourt durante o atendimento de um paciente" fill sizes="(max-width:700px) 88vw, 430px"/></div></figure>
     <div className="care-content">
       <div className="care-details">{careSteps.map(([title,copy],i)=><details key={title} open={i===0}><summary><span className="editorial-index">0{i+1}</span><h3>{title}</h3><Plus size={20} aria-hidden="true"/></summary><p>{copy}</p></details>)}</div>
     </div></div>

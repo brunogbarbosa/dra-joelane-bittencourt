@@ -416,3 +416,37 @@
  .professional-treatments ul { justify-content: flex-start; }
 }
 @media(prefers-reduced-motion:reduce) { .care-details summary svg { transition: none; } }
+
+/* The professional opens the story; Cris's photographs and voice follow together. */
+.conversion-hero .campaign-inner { gap: clamp(40px,5vw,76px); }
+.hero-introduction { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,.9fr); align-items: center; gap: clamp(28px,4vw,64px); width: 100%; }
+.conversion-hero .hero-introduction .campaign-copy { text-align: left; max-width: none; }
+.conversion-hero .hero-introduction .campaign-subtitle { margin-inline: 0; max-width: 540px; }
+.conversion-hero .hero-doctor { width: 100%; max-width: 540px; aspect-ratio: 4/5; justify-self: end; }
+.conversion-hero .hero-doctor .campaign-silhouette { position: absolute; inset: 0; overflow: hidden; border-radius: 150px 10px 10px 10px; background: #deceb6; box-shadow: 18px 18px 0 -6px #deceb640; }
+.conversion-hero .hero-doctor img { object-fit: cover; object-position: 64% 38%; }
+.conversion-hero .hero-case { width: min(100%,1000px); margin-inline: auto; border-top: 1px solid var(--line); padding-top: clamp(28px,3vw,44px); }
+.conversion-hero .hero-case .comparison-title { text-align: left; padding-inline: 0; margin-bottom: 24px; font-size: clamp(23px,2.5vw,34px); }
+.conversion-hero .hero-case .hero-voice { max-width: 850px; margin: 28px auto 0; padding: 0 0 0 24px; border-left: 1px solid var(--rose); }
+.conversion-hero .hero-case .hero-voice blockquote { font-size: clamp(22px,2.1vw,28px); line-height: 1.45; }
+.conversion-hero .hero-case .review-source { text-decoration: none; font-size: 13px; }
+.conversion-hero .hero-case .hero-result-note { padding-inline: 0; }
+.care-chapter .care-photo { aspect-ratio: 492/876; border-radius: 56px 6px 6px 6px; }
+.care-chapter .care-photo img { object-fit: contain; object-position: center; }
+@media(max-width:1100px) {
+ .hero-introduction { grid-template-columns: minmax(0,1fr) minmax(0,.85fr); gap: 28px; }
+ .conversion-hero .hero-doctor { aspect-ratio: 2/3; }
+ .conversion-hero .hero-doctor .campaign-silhouette { border-top-left-radius: 100px; }
+ .conversion-hero .hero-case { width: calc(100vw - 24px); max-width: 1000px; }
+ .conversion-hero .hero-case .comparison-title,.conversion-hero .hero-case .hero-result-note { padding-inline: 4vw; }
+ .conversion-hero .hero-case .hero-voice { margin-inline: 4vw; }
+}
+@media(max-width:700px) {
+ .hero-introduction { grid-template-columns: 1fr; gap: 28px; }
+ .conversion-hero .hero-doctor { width: 100%; max-width: 430px; aspect-ratio: 4/5; justify-self: center; }
+ .conversion-hero .hero-doctor .campaign-silhouette { border-top-left-radius: 100px; box-shadow: 10px 10px 0 -3px #deceb640; }
+ .conversion-hero .hero-case .hero-voice { padding-left: 16px; margin-top: 22px; }
+ .conversion-hero .hero-case .hero-voice blockquote { font-size: 21px; }
+ .conversion-hero .hero-case .comparison-title { font-size: 24px; }
+ .care-chapter .care-photo { max-width: 330px; }
+}
