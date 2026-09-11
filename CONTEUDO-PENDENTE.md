@@ -1,5 +1,13 @@
 # Conteúdo e fontes — Dra. Joelane
 
+## Atualização de 11/09/2026 — ordem atual dos casos
+
+- Hero: Cris, com as fotos `cris-antes.webp` e `cris-depois.webp`. O relato foi transcrito literalmente do print `codex-clipboard-36b83c0d-08af-4b6a-a9a8-a727fd2da422.png`; o usuário confirmou sua correspondência com Cris. Identificado como depoimento do Instagram, sem atribuição ao Google ou link inventado.
+- Caso 01: Roseli, com as fotos anteriormente utilizadas no hero. Sua avaliação do Google permanece no carrossel. O texto específico da história clínica de Cris não foi transferido para Roseli; o conteúdo de Cris continua preservado em `heroCase.editorial`.
+- Caso 02: Bruna. Novo antes: `codex-clipboard-bf1907ad-9d55-4c13-8bc0-8128e5cd4e18.png`, otimizado em `bruna-antes-atualizado.webp` (1320 × 1480). Versão anterior preservada.
+- Caso 03: Luciano. Zoom do antes ajustado de 1,30 para 1,45 para aproximar a escala do rosto à do depois, mantendo o original disponível na ampliação.
+- As notas abaixo registram a configuração anterior e o histórico de fontes.
+
 ## Atualização de 10/09/2026
 
 - Horários confirmados pelo usuário: segunda a sexta, 9h–18h. Sábado, 9h–13h, mediante agendamento. Qualificação de demanda retirada a pedido do usuário.

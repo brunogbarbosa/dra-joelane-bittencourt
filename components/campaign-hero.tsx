@@ -41,7 +41,7 @@ export function CampaignHero() {
         <p className="campaign-kicker">HARMONIZAÇÃO FACIAL EM SALVADOR</p>
         <h1 id="campaign-title"><span className="campaign-title-line"><span>Seu rosto não precisa de mais procedimentos.</span></span><span className="campaign-title-line"><em>Precisa da estratégia certa.</em></span></h1>
         <p className="campaign-subtitle">Avaliação e planejamento para entender seu rosto como um todo e preservar quem você é.</p>
-        <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><a className="review-source" href={heroVoice.sourceUrl} target="_blank" rel="noopener noreferrer">{heroVoice.name} · Avaliação no Google</a></div>
+        <div className="hero-voice"><blockquote>“{heroVoice.quote}”</blockquote><span className="review-source">{heroVoice.name} · Depoimento compartilhado no Instagram</span></div>
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
       <div className="campaign-portrait"><div className="campaign-silhouette">

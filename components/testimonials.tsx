@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play, Star } from 'lucide-react';
-import { heroVoice, patientVoices, googleReviewsUrl } from '@/data/conversion';
+import { roseliVoice, patientVoices, googleReviewsUrl } from '@/data/conversion';
 
-const reviews = [...patientVoices, heroVoice];
+const reviews = [...patientVoices, roseliVoice];
 
 export function Testimonials() {
   const track = useRef<HTMLDivElement>(null);
