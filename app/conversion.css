@@ -442,7 +442,7 @@
  .conversion-hero .hero-case .hero-voice { margin-inline: 4vw; }
 }
 @media(max-width:700px) {
- .hero-introduction { grid-template-columns: minmax(0,1fr) minmax(136px,.72fr); align-items: start; gap: 12px; }
+ .hero-introduction { grid-template-columns: minmax(0,1fr) minmax(150px,.95fr); align-items: start; gap: 10px; }
  .conversion-hero .hero-introduction .campaign-copy { min-width: 0; }
  .conversion-hero .hero-introduction .campaign-title-line:first-child { max-width: 100%; }
  .conversion-hero .hero-introduction .campaign-subtitle { max-width: 100%; }
