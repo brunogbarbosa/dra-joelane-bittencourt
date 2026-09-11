@@ -20,7 +20,7 @@ const roseliCase: ClinicalCase =
     ['O resultado', 'Um planejamento pensado para restaurar equilíbrio e sustentação, preservando aquilo que faz parte da sua identidade.'],
   ], photos: [
     { src:'/images/roseli-antes-atualizado.webp', label:'Antes', alt:'Roseli: registro anterior ao tratamento, fornecido pela Dra. Joelane', width:1122, height:1087, position:'center' },
-    { src:'/images/roseli-depois-atualizado.webp', label:'Depois', alt:'Roseli: registro após o tratamento, fornecido pela Dra. Joelane', width:1122, height:1004, position:'center' },
+    { src:'/images/caso-1-depois-revisado.webp', label:'Depois', alt:'Roseli: registro após o tratamento, fornecido pela Dra. Joelane', width:1024, height:1280, position:'50% 0%', zoom:1.3, zoomOrigin:'50% 0%' },
   ]};
 
 // Cris abre a página; Roseli ocupa o primeiro estudo de caso.
