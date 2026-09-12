@@ -9,6 +9,7 @@ export function CaseStudies() {
   const [expanded,setExpanded]=useState(false);
   const dialog=useRef<HTMLDialogElement>(null);
   const opener=useRef<HTMLButtonElement>(null);
+  const touchStart=useRef<{x:number;y:number}|null>(null);
   const current=clinicalCases[active];
   const clinicalReady=[current.complaint,current.observation,current.planning,current.outcome].every(value=>!value.startsWith('['));
   const details=clinicalReady?[['Queixa',current.complaint],['O que observei',current.observation],['Planejamento',current.planning],['Resultado',current.outcome]]:current.editorial;
@@ -21,8 +22,18 @@ export function CaseStudies() {
   const move=(delta:number)=>setActive(i=>(i+delta+clinicalCases.length)%clinicalCases.length);
   return <div className="case-studies">
     <div className="case-navigation" role="group" aria-label="Escolher estudo de caso">{clinicalCases.map((c,i)=><button key={c.id} aria-pressed={active===i} onClick={()=>setActive(i)}>CASO 0{i+1}<ArrowUpRight size={18} strokeWidth={1.5} aria-hidden="true"/></button>)}</div>
+    <p className="case-browse-hint">Use as setas para ver os {clinicalCases.length} casos.<span> Você também pode deslizar as fotos para o lado.</span></p>
+    <div className="case-carousel-controls" role="group" aria-label="Navegar entre os casos">
+      <button type="button" onClick={()=>move(-1)} aria-label="Caso anterior"><ArrowLeft size={20} aria-hidden="true"/><span>Anterior</span></button>
+      <span className="case-progress" aria-live="polite" aria-atomic="true">Caso {active+1} de {clinicalCases.length}</span>
+      <button type="button" className="case-next" onClick={()=>move(1)} aria-label="Próximo caso"><span>Próximo</span><ArrowRight size={20} aria-hidden="true"/></button>
+    </div>
     <div className="case-layout" key={current.id}>
-      <div className="case-media"><p className="comparison-title">Caso 0{active+1} · {current.patient}</p><CasePhotos record={current}/>
+      <div className="case-media"><p className="comparison-title">Caso 0{active+1} · {current.patient}</p><div className="case-swipe-area"
+        onTouchStart={e=>{touchStart.current=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null;}}
+        onTouchCancel={()=>{touchStart.current=null;}}
+        onTouchEnd={e=>{const start=touchStart.current;touchStart.current=null;const end=e.changedTouches[0];if(!start||!end)return;const dx=end.clientX-start.x;const dy=end.clientY-start.y;if(Math.abs(dx)>=50&&Math.abs(dx)>Math.abs(dy)*1.5)move(dx<0?1:-1);}}
+      ><CasePhotos record={current}/></div>
         <p className="case-image-note">{current.mode==='reference'?'Registros enviados pela profissional. Sem ordem de antes e depois informada.':current.photos.some(p=>p.presentationMask)?'Fundo do “depois” isolado para apresentação. Fotografias originais disponíveis na ampliação.':'Registros individuais, com diferenças de luz, expressão e enquadramento.'}</p>
       </div>
       <div className="case-copy" aria-live="polite"><p className="chapter-tag">Caso real / 0{active+1}</p>
