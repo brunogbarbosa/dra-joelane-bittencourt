@@ -53,7 +53,7 @@ export function CampaignHero() {
         <source media="(max-width:700px)" srcSet="/images/joelane-hero-mobile.webp"/>
         <Image src={site.images.hero} alt="Dra. Joelane Bittencourt em seu consultório" fill preload sizes="(max-width:700px) 88vw, 44vw"/>
         </picture>
-      </div><figcaption className="hero-doctor-name">{site.name}</figcaption></figure>
+      </div><figcaption className="hero-doctor-name"><span>Dra. {site.name}</span><span>{site.cro}</span></figcaption></figure>
       </div>
       <div className="hero-case">
         <p className="comparison-title">Full Face · Um olhar para o rosto como um todo.</p>
