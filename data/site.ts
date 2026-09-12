@@ -21,6 +21,6 @@ export const site = {
     { image: '/images/resultado-06.webp', label: 'Expressão e naturalidade', alt: 'Registro 06 de antes e depois fornecido pela Dra. Joelane Bittencourt: expressão e naturalidade', orientation: 'horizontal', beforeShare: 0.5079365079365079, comparisonRatio: 0.4150453955901427 },
     { image: '/images/resultado-07.webp', label: 'Um olhar renovado', alt: 'Registro 07 de antes e depois fornecido pela Dra. Joelane Bittencourt: um olhar renovado', orientation: 'horizontal', beforeShare: 0.4944, comparisonRatio: 0.38625 },
   ] },
-  seo: { title: 'Dra. Joelane Bittencourt | Harmonização Facial em Salvador', description: 'Harmonização Orofacial e rejuvenescimento facial em Salvador com a Dra. Joelane Bittencourt. Avaliação individualizada e planejamento para o seu rosto.', url: '' },
+  seo: { title: 'Dra. Joelane Bittencourt | Harmonização Facial em Salvador', description: 'Harmonização Orofacial e rejuvenescimento facial em Salvador com a Dra. Joelane Bittencourt. Avaliação individualizada e planejamento para o seu rosto.', url: 'https://www.drajoelanebittencourt.com.br' },
 };
 export const appointmentUrl = site.whatsappUrl || (site.whatsapp ? `https://wa.me/${site.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent('Olá! Conheci o trabalho da Dra. Joelane pelo site e gostaria de saber mais sobre a avaliação e o planejamento facial.')}` : site.instagram);
