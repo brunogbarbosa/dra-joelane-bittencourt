@@ -138,7 +138,7 @@ export function AuthorChapter() {
       <div className={styles.closingRow}>
         <div className={styles.closingMonogram} aria-hidden="true"><strong>jb.</strong><span /></div>
         <p className={styles.closingStatement}>
-          <span data-author-motion="final">Por trás de cada resultado, existe uma pessoa.</span>
+          <span data-author-motion="final">Por trás de cada resultado, existe uma pessoa.</span>{' '}
           <em data-author-motion="final">E é por isso que estética, para mim, não deve apagar quem você é.</em>
         </p>
         <div className={styles.closingSeal}><span aria-hidden="true" /><BrandSeal id={uid} /></div>

@@ -369,7 +369,7 @@
 .treatments-options h3 { font-size: clamp(24px,2.2vw,32px); }
 .treatments-options li p { margin-top: 7px; line-height: 1.55; }
 .care-intro { max-width: 900px; padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
-.care-intro p { font: italic clamp(24px,2.3vw,32px)/1.4 var(--serif); color: var(--rose-deep); }
+.care-intro p { font: normal 400 clamp(20px,2vw,28px)/1.6 var(--sans); color: var(--wine); }
 .treatments-possibilities { margin: 22px 0; max-width: 580px; font-size: 15px; line-height: 1.65; color: var(--rose-deep); }
 .care-chapter .care-body { margin-top: 28px; align-items: center; }
 .care-chapter .care-photo { position: relative; top: auto; max-width: 430px; justify-self: center; }
