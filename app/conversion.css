@@ -467,3 +467,27 @@
  .conversion-hero .hero-case .comparison-title { font-size: clamp(14px,3.8vw,24px); line-height: 1.3; letter-spacing: -.02em; margin-bottom: 12px; }
  .care-chapter .care-photo { max-width: 330px; }
 }
+
+/* The mobile composition carries through tablet and desktop with a close portrait. */
+@media(min-width:701px) {
+ .conversion-hero.campaign { padding-top: clamp(135px,11vw,170px); }
+ .conversion-hero .hero-introduction { max-width: 1000px; margin-inline: auto; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: clamp(28px,4vw,64px); align-items: center; }
+ .conversion-hero .hero-introduction .campaign-copy { min-width: 0; }
+ .conversion-hero .hero-introduction .campaign-kicker { max-width: 360px; font-size: clamp(12px,1.1vw,16px); line-height: 1.65; letter-spacing: .2em; margin-bottom: 24px; }
+ .conversion-hero .hero-introduction h1 { max-width: 8em; font-size: clamp(42px,4.8vw,64px); line-height: 1.1; letter-spacing: -.035em; }
+ .conversion-hero .hero-introduction .campaign-title-line { text-wrap: balance; }
+ .conversion-hero .hero-introduction h1 em { display: block; margin-top: 14px; }
+ .conversion-hero .hero-introduction .campaign-subtitle,
+ .conversion-hero .hero-introduction .hero-credentials { display: none; }
+ .conversion-hero .hero-primary-action { margin-top: 30px; width: min(100%,440px); }
+ .conversion-hero .hero-primary-action .hero-booking { min-height: 88px; padding: 20px 24px; gap: 20px; border-radius: 20px; }
+ .conversion-hero .hero-primary-action .hero-booking>span { font-size: clamp(16px,1.65vw,23px); letter-spacing: .015em; }
+ .conversion-hero .hero-doctor { width: 100%; max-width: none; aspect-ratio: .7; margin: 0; }
+ .conversion-hero .hero-doctor::before { content: ''; position: absolute; inset: -22px 12% 7% 9%; border-top: 1px solid var(--rose); border-left: 1px solid var(--rose); border-radius: 240px 0 0 0; transform: rotate(-7deg); }
+ .conversion-hero .hero-doctor .campaign-silhouette { border-radius: 200px 0 0 85px; background: #dfd3c7; box-shadow: none; }
+ .conversion-hero .hero-doctor img { width: 250% !important; height: auto !important; max-width: none; left: -117% !important; top: 20px !important; object-fit: contain; }
+ .conversion-hero .hero-case { width: 100%; max-width: 1000px; }
+ .conversion-hero .hero-case .comparison-title,
+ .conversion-hero .hero-case .hero-result-note { padding-inline: 0; }
+ .conversion-hero .hero-case .comparison-title { font-size: clamp(24px,2.5vw,34px); }
+}

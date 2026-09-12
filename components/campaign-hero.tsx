@@ -49,10 +49,7 @@ export function CampaignHero() {
         <p className="hero-credentials">Dra. Joelane Bittencourt · CRO-BA 20242<br/>Salvador · Bahia</p>
       </div>
       <figure className="campaign-portrait hero-doctor"><div className="campaign-silhouette">
-        <picture>
-        <source media="(max-width:700px)" srcSet="/images/joelane-hero-mobile.webp"/>
-        <Image src={site.images.hero} alt="Dra. Joelane Bittencourt em seu consultório" fill preload sizes="(max-width:700px) 88vw, 44vw"/>
-        </picture>
+        <Image src="/images/joelane-hero-mobile.webp" alt="Dra. Joelane Bittencourt" fill preload sizes="(max-width:700px) 120vw, (max-width:1200px) 110vw, 1200px"/>
       </div><figcaption className="hero-doctor-name"><span>Dra. {site.name}</span><span>{site.cro}</span></figcaption></figure>
       </div>
       <div className="hero-case">
