@@ -31,8 +31,9 @@ export const heroCase: ClinicalCase =
     ['O olhar', 'A perda de volume e sustentação pode alterar a percepção dos contornos faciais. Por isso, o rosto foi avaliado como um todo, respeitando suas características e o momento vivido pela paciente.'],
     ['O resultado', 'Um planejamento pensado para restaurar equilíbrio e sustentação, preservando aquilo que faz parte da sua identidade.'],
   ], photos: [
-    { src:'/images/cris-antes.webp', label:'Antes', alt:'Cris: fotografia anterior, fornecida pela Dra. Joelane', width:613, height:1327, position:'50% 30%' },
-    { src:'/images/cris-depois.webp', label:'Depois', alt:'Cris: fotografia posterior, fornecida pela Dra. Joelane', width:671, height:1327, position:'50% 22%' },
+    // Matching crown-to-chin scale and top spacing using proportional crops of the original photographs.
+    { src:'/images/cris-antes.webp', label:'Antes', alt:'Cris: fotografia anterior, fornecida pela Dra. Joelane', width:613, height:1327, position:'center', framing:{x:0,y:150,width:613,height:817.333333} },
+    { src:'/images/cris-depois.webp', label:'Depois', alt:'Cris: fotografia posterior, fornecida pela Dra. Joelane', width:671, height:1327, position:'center', framing:{x:61,y:158,width:549,height:732} },
   ]};
 
 export const clinicalCases: ClinicalCase[] = [
